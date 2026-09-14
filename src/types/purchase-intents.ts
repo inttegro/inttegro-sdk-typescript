@@ -19,16 +19,6 @@ export const PurchaseIntentStatuses = {
 export type PurchaseIntentStatus =
   (typeof PurchaseIntentStatuses)[keyof typeof PurchaseIntentStatuses];
 
-export const PurchaseIntentActivityTypes = {
-  ExpiredViewed: 'expired_viewed',
-  OrderCreated: 'order_created',
-  PaymentFailed: 'payment_failed',
-  PaymentStarted: 'payment_started',
-  Viewed: 'viewed',
-} as const;
-export type PurchaseIntentActivityType =
-  (typeof PurchaseIntentActivityTypes)[keyof typeof PurchaseIntentActivityTypes];
-
 export interface PurchaseIntentProductSelector {
   id: string;
   variantSetId?: string;
@@ -125,53 +115,6 @@ export interface PagePurchaseIntentsRequest {
   pageSize: number;
 }
 
-export interface PurchaseIntentActivityAttribution {
-  landingUrl?: string;
-  referrer?: string;
-  referrerHost?: string;
-  source?: string;
-  medium?: string;
-  campaign?: string;
-  term?: string;
-  content?: string;
-  channel?: string;
-}
-
-export interface PurchaseIntentActivityVisitor {
-  sessionId?: string;
-  visitorId?: string;
-  userAgent?: string;
-  ipAddress?: string;
-  device?: string;
-  browser?: string;
-  os?: string;
-  country?: string;
-  region?: string;
-  city?: string;
-  timezone?: string;
-}
-
-export interface PurchaseIntentActivity {
-  id: string;
-  purchaseIntentId: string;
-  type: PurchaseIntentActivityType;
-  source?: string;
-  attribution?: PurchaseIntentActivityAttribution;
-  visitor?: PurchaseIntentActivityVisitor;
-  productId?: string;
-  variantProductId?: string;
-  quantity?: number;
-  amount?: Amount;
-  orderId?: string;
-  paymentId?: string;
-  errorCode?: string;
-  createdAt: Date;
-}
-
-export interface PurchaseIntentActivityLog {
-  recent?: PurchaseIntentActivity[];
-}
-
 export interface PurchaseIntentMerchant {
   appName?: string;
   organizationId?: string;
@@ -229,7 +172,6 @@ export interface PurchaseIntentVariantSet {
 }
 
 export interface PurchaseIntent {
-  activity?: PurchaseIntentActivityLog;
   allowVariants: boolean;
   createdAt: Date;
   expiresAt?: Date;

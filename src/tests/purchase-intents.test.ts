@@ -15,17 +15,6 @@ describe('PurchaseIntents', () => {
 
   it('should create a purchase intent', async () => {
     const intent = {
-      activity: {
-        recent: [
-          {
-            createdAt: '2026-09-09T12:01:00Z',
-            id: 'saleevt_123',
-            purchaseIntentId: 'sale_123',
-            type: 'viewed',
-            visitor: { ipAddress: '203.0.113.7' },
-          },
-        ],
-      },
       allowVariants: false,
       createdAt: '2026-09-09T12:00:00Z',
       id: 'sale_123',
@@ -57,7 +46,6 @@ describe('PurchaseIntents', () => {
     const result = await purchaseIntents.create(request);
 
     expect(result).toEqual(mockResponse.purchaseIntent);
-    expect(result.activity?.recent?.[0].visitor?.ipAddress).toBe('203.0.113.7');
     expect(result.merchant?.organizationName).toBe('Tea House Ltd');
     expect(result.product?.dimensions?.digital?.bytes).toBe(1024);
     expect(result.usage.order?.id).toBe('or_123');
