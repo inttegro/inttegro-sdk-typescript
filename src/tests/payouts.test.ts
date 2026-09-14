@@ -1,6 +1,12 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, expectTypeOf, vi, beforeEach } from 'vitest';
 import { Payouts } from '../resources/payouts';
 import { HttpClient } from '../http-client';
+import type {
+  Payout,
+  PayoutDestinations,
+  PayoutError,
+  PayoutSettingsMutation,
+} from '../types/payouts';
 
 describe('Payouts', () => {
   let payouts: Payouts;
@@ -62,5 +68,14 @@ describe('Payouts', () => {
 
   it('should validate payout_id for cancel', async () => {
     await expect(payouts.cancel({ payoutId: '' })).rejects.toThrow('Validation failed');
+  });
+
+  it('exposes canonical payout fields with concrete types', () => {
+    expectTypeOf<Payout['executeAfter']>().toEqualTypeOf<Date>();
+    expectTypeOf<Payout['error']>().toEqualTypeOf<PayoutError | undefined>();
+    expectTypeOf<Payout['balanceTransactions']>().toEqualTypeOf<string[] | undefined>();
+    expectTypeOf<PayoutSettingsMutation['destinations']>().toEqualTypeOf<
+      PayoutDestinations | undefined
+    >();
   });
 });
