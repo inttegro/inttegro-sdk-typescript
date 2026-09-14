@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { HttpClient } from '../http-client';
 import { Refunds } from '../resources/refunds';
+import { RefundFailureReasons, type Refund } from '../types';
 
 describe('Refunds', () => {
   let refunds: Refunds;
@@ -49,5 +50,20 @@ describe('Refunds', () => {
     );
     expect(postSpy).toHaveBeenCalledWith('/refunds/lookup', { refundId: 'rf_123' });
     expect(postSpy).toHaveBeenCalledWith('/refunds/page', { pageNumber: 1, pageSize: 20 });
+  });
+});
+
+describe('Refund failure contract', () => {
+  it('exposes stable sanitized failure reasons including the fail-closed fallback', () => {
+    const refund = {
+      failure: {
+        reason: RefundFailureReasons.Unknown,
+        detail: 'The refund could not be completed.',
+        retryable: false,
+      },
+    } as Refund;
+
+    expect(refund.failure?.reason).toBe('unknown');
+    expect(RefundFailureReasons.RefundDeclined).toBe('refund_declined');
   });
 });

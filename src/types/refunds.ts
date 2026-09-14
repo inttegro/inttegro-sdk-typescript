@@ -24,6 +24,25 @@ export const RefundStatuses = {
 } as const;
 export type RefundStatus = (typeof RefundStatuses)[keyof typeof RefundStatuses];
 
+export const RefundFailureReasons = {
+  InsufficientBalance: 'insufficient_balance',
+  OriginalPaymentMethodUnavailable: 'original_payment_method_unavailable',
+  OriginalPaymentNotRefundable: 'original_payment_not_refundable',
+  RefundNotSupported: 'refund_not_supported',
+  AmountNotSupported: 'amount_not_supported',
+  RefundDeclined: 'refund_declined',
+  RefundNotPermitted: 'refund_not_permitted',
+  TemporarilyUnavailable: 'temporarily_unavailable',
+  Unknown: 'unknown',
+} as const;
+export type RefundFailureReason = (typeof RefundFailureReasons)[keyof typeof RefundFailureReasons];
+
+export interface RefundFailure {
+  reason: RefundFailureReason;
+  detail: string;
+  retryable: boolean;
+}
+
 export interface CreateRefundLineItem {
   orderLineItemId: string;
   refundAmount: AmountParams;
@@ -76,6 +95,7 @@ export interface Refund {
   canceledAt?: Date;
   cancelReason?: string;
   customData?: CustomData;
+  failure?: RefundFailure;
   failedAt?: Date;
   processingAt?: Date;
   orderAmount?: Amount;
