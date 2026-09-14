@@ -43,6 +43,7 @@ export interface CreateRefundRequest {
 
 export interface CancelRefundRequest {
   refundId: string;
+  reason?: string;
   requestMeta?: RequestMeta;
 }
 
@@ -73,9 +74,11 @@ export interface Refund {
   status: RefundStatus;
   total: Amount;
   canceledAt?: Date;
+  cancelReason?: string;
   customData?: CustomData;
   failedAt?: Date;
   processingAt?: Date;
+  orderAmount?: Amount;
   reasonDetails?: string;
   reference?: string;
   succeededAt?: Date;

@@ -32,7 +32,10 @@ describe('Refunds', () => {
       },
       { idempotencyKey: 'idem_refund_create' }
     );
-    await refunds.cancel({ refundId: 'rf_123' }, { idempotencyKey: 'idem_refund_cancel' });
+    await refunds.cancel(
+      { refundId: 'rf_123', reason: 'Customer no longer wants the refund' },
+      { idempotencyKey: 'idem_refund_cancel' }
+    );
     await refunds.lookup({ refundId: 'rf_123' });
     await refunds.page({ pageNumber: 1, pageSize: 20 });
 
@@ -41,7 +44,7 @@ describe('Refunds', () => {
     });
     expect(postSpy).toHaveBeenCalledWith(
       '/refunds/cancel',
-      { refundId: 'rf_123' },
+      { refundId: 'rf_123', reason: 'Customer no longer wants the refund' },
       { headers: { 'Idempotency-Key': 'idem_refund_cancel' } }
     );
     expect(postSpy).toHaveBeenCalledWith('/refunds/lookup', { refundId: 'rf_123' });
