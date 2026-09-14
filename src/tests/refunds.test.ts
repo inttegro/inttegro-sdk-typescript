@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { HttpClient } from '../http-client';
 import { Refunds } from '../resources/refunds';
-import { RefundFailureReasons, type Refund } from '../types';
+import { RefundFailureReasons, RefundSettlementTypes, type Refund } from '../types';
 
 describe('Refunds', () => {
   let refunds: Refunds;
@@ -65,5 +65,26 @@ describe('Refund failure contract', () => {
 
     expect(refund.failure?.reason).toBe('unknown');
     expect(RefundFailureReasons.RefundDeclined).toBe('refund_declined');
+  });
+});
+
+describe('Refund settlement contract', () => {
+  it('models offline and payment-method destinations as a discriminated union', () => {
+    const offline: Refund['settlement'] = { type: RefundSettlementTypes.Offline };
+    const paymentMethod: Refund['settlement'] = {
+      type: RefundSettlementTypes.PaymentMethod,
+      paymentMethod: {
+        id: 'pm_123',
+        type: 'mobile_money',
+        mobileMoney: {
+          network: 'mtn',
+          accountNumber: '****7831',
+          last4: '7831',
+        },
+      },
+    };
+
+    expect(offline).toEqual({ type: 'offline' });
+    expect(paymentMethod.paymentMethod.mobileMoney.accountNumber).toBe('****7831');
   });
 });

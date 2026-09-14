@@ -43,6 +43,46 @@ export interface RefundFailure {
   retryable: boolean;
 }
 
+export const RefundSettlementTypes = {
+  Offline: 'offline',
+  PaymentMethod: 'payment_method',
+} as const;
+export type RefundSettlementType =
+  (typeof RefundSettlementTypes)[keyof typeof RefundSettlementTypes];
+
+export interface RefundSettlementMobileMoney {
+  network: 'airtel' | 'mtn' | 'telecel' | 'vodafone';
+  accountNumber: string;
+  last4: string;
+}
+
+export interface RefundSettlementGhanaBankAccount {
+  accountNumber: string;
+  last4: string;
+}
+
+export type RefundSettlementPaymentMethod =
+  | {
+      id: string;
+      type: 'mobile_money';
+      mobileMoney: RefundSettlementMobileMoney;
+    }
+  | {
+      id: string;
+      type: 'bank_account';
+      bankAccount: {
+        type: 'ghana_bank_account';
+        ghanaBankAccount: RefundSettlementGhanaBankAccount;
+      };
+    };
+
+export type RefundSettlement =
+  | { type: 'offline' }
+  | {
+      type: 'payment_method';
+      paymentMethod: RefundSettlementPaymentMethod;
+    };
+
 export interface CreateRefundLineItem {
   orderLineItemId: string;
   refundAmount: AmountParams;
@@ -90,6 +130,7 @@ export interface Refund {
   lineItems: RefundLineItem[];
   orderId: string;
   reason: RefundReason;
+  settlement: RefundSettlement;
   status: RefundStatus;
   total: Amount;
   canceledAt?: Date;
