@@ -12,31 +12,55 @@ export const PayoutStatuses = {
 } as const;
 export type PayoutStatus = (typeof PayoutStatuses)[keyof typeof PayoutStatuses];
 
-export interface PayoutScheduleSpec {
-  tPlus?: string;
-  label?: string;
-  abide?: string;
+export interface PayoutSettingsLookupScheduleAgingSpec {
+  abide: string;
+  label: string;
+  tPlus: string;
 }
 
-export interface PayoutSchedule {
-  id?: string;
-  name?: string;
-  type?: string;
-  interval?: string;
-  scheduleOn?: string;
-  description?: string;
-  spec?: PayoutScheduleSpec;
-  agingSpec?: PayoutScheduleSpec;
+export interface PayoutSettingsLookupSchedule {
+  agingSpec: PayoutSettingsLookupScheduleAgingSpec;
+  description: string;
+  interval: string;
+  name: string;
+  scheduleOn: string;
+  type: string;
 }
 
-export interface PayoutSettings {
+export interface PayoutSettingsMutationScheduleSpec {
+  abide: string;
+  id: string;
+  label: string;
+  tPlus: string;
+}
+
+export interface PayoutSettingsMutationSchedule {
+  description: string;
+  id: string;
+  interval: string;
+  name: string;
+  scheduleOn: string;
+  spec: PayoutSettingsMutationScheduleSpec;
+  type: string;
+}
+
+export interface PayoutSettingsLookup {
+  destinations: PayoutDestinations;
+  fxEnabled?: boolean;
+  schedule?: PayoutSettingsLookupSchedule;
+}
+
+export interface PayoutSettingsMutation {
+  destinations?: PayoutDestinations;
   id?: string;
   fxEnabled?: boolean;
-  destinations?: PayoutDestinations;
-  schedule?: PayoutSchedule | null;
+  schedule?: PayoutSettingsMutationSchedule;
 }
 
-export type PayoutDestinations = Readonly<Record<string, string>>;
+export interface PayoutDestinations {
+  /** Financial account that receives Ghana cedi payouts. */
+  ghs?: string;
+}
 
 export interface SetPayoutDestinationsRequest {
   destinations: PayoutDestinations;
@@ -45,7 +69,7 @@ export interface SetPayoutDestinationsRequest {
 export interface SchedulePayoutRequest {
   destinationId: string;
   executeAfter?: Date;
-  maxAmount: number;
+  maxAmount?: number;
   reference: string;
 }
 
@@ -54,50 +78,45 @@ export interface LookupPayoutRequest {
 }
 
 export interface PagePayoutsRequest {
-  pageNumber?: number;
+  pageNumber: number;
   pageSize?: number;
 }
 
 export interface PayoutError {
-  type?: string;
-  message?: string;
-  cause?: string;
-  occurredAt?: Date;
+  cause: string;
+  message: string;
+  occurredAt: Date;
+  type: string;
 }
 
 export interface Payout {
-  id?: string;
-  applicationId?: string;
-  destinationId?: string;
   amount?: Amount;
   balanceTransactions?: string[];
-  status?: PayoutStatus;
-  initiatedBy?: string;
-  executeAfter?: Date;
-  scheduledAt?: Date;
-  scheduledBy?: string;
   canceledAt?: Date;
   customData?: CustomData;
-  error?: PayoutError | null;
+  destinationId: string;
+  error?: PayoutError;
+  executeAfter: Date;
   executedBy?: string;
-  failedAt?: Date | null;
-  maxAmount?: Amount;
-  latestAttemptId?: string;
-  latestError?: PayoutError;
+  expectedAt?: Date;
+  failedAt?: Date;
+  id: string;
+  initiatedAt: Date;
+  initiatedBy?: string;
+  maxAmount: Amount;
   reference?: string;
   scheduleId?: string;
-  sentAt?: Date | null;
+  scheduledAt?: Date;
+  scheduledBy?: string;
+  sentAt?: Date;
   sourceId?: string;
-  initiatedAt?: Date;
-  executedAt?: Date;
-  expectedAt?: Date;
+  status: PayoutStatus;
   succeededAt?: Date;
-  balanceTransactionIds?: string[];
 }
 
 export interface PayoutPage {
-  number?: number;
-  size?: number;
+  number: number;
+  size: number;
   payouts?: Payout[];
 }
 
