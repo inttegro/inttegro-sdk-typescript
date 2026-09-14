@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.0.0] - 2026-09-14
+
+- **Breaking:** replaced payout records and generic payloads with named request,
+  response, settings, page, error, and destination types.
+- Made `ghs` the explicit supported payout-destination field and exposed payout
+  timestamps as `Date` values.
+- Removed server-internal purchase-intent activity response models and exposed
+  refund order and cancellation context.
+
 ## [9.0.4] - 2026-09-12
 
 - Restored npm release publishing through the existing automation token while
