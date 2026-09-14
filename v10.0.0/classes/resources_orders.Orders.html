@@ -1,0 +1,601 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Orders | Inttegro TypeScript SDK - v10.0.0</title><meta name="description" content="Documentation for Inttegro TypeScript SDK"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Inttegro TypeScript SDK - v10.0.0</a>
+<div id="tsd-toolbar-links"><a href="https://studio.inttegro.com/sdks">Studio</a><a href="https://github.com/inttegro/inttegro-sdk-typescript">GitHub</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb" aria-label="Breadcrumb">
+<li><a href="../modules/resources_orders.html">resources/orders</a></li>
+<li><a href="" aria-current="page">Orders</a></li></ul>
+<h1>Class Orders</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Orders resource for managing complete order lifecycle operations.</p>
+</div></section><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L71">src/resources/orders.ts:71</a></li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h5 class="tsd-index-heading uppercase">Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="constructors">Constructors<a href="#constructors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#cancel" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>cancel</span></a>
+<a href="#complete" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>complete</span></a>
+<a href="#confirmpayment" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>confirm<wbr/>Payment</span></a>
+<a href="#create" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create</span></a>
+<a href="#createwithresponse" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>With<wbr/>Response</span></a>
+<a href="#finalize" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>finalize</span></a>
+<a href="#lookup" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>lookup</span></a>
+<a href="#page" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>page</span></a>
+<a href="#pay" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>pay</span></a>
+<a href="#requestconfirmation" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>request<wbr/>Confirmation</span></a>
+<a href="#sendinvoice" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Invoice</span></a>
+<a href="#sendreceipt" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Receipt</span></a>
+<a href="#update" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update</span></a>
+</div></section></div></details></section></section>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="constructors-1">Constructors<a href="#constructors-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="constructor"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="constructororders"><span class="tsd-signature-keyword">new</span> <span class="tsd-kind-constructor-signature">Orders</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">httpClient</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HttpClient</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">Orders</a><a href="#constructororders" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">httpClient</span>: <span class="tsd-signature-type">HttpClient</span></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">Orders</a></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L72">src/resources/orders.ts:72</a></li></ul></aside></div></li></ul></section></section></details>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="cancel"><span>cancel</span><a href="#cancel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="cancel-1"><span class="tsd-kind-call-signature">cancel</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.CancelOrderRequest.html" class="tsd-signature-type tsd-kind-interface">CancelOrderRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#cancel-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Cancel an order, stopping payment execution and preventing further processing.</p>
+<p>Canceling an order is irreversible and should be done when the customer requests cancellation or
+the order cannot be fulfilled. If payment was already captured, you'll need to refund it separately.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.CancelOrderRequest.html" class="tsd-signature-type tsd-kind-interface">CancelOrderRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Cancellation parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Cancel order request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="executerefund"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">executeRefund</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Record whether a refund was requested as part of the cancellation</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Order ID to cancel</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="reason"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">reason</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Optional cancellation reason</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="requestmeta"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">requestMeta</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/types_requests.RequestMeta.html" class="tsd-signature-type tsd-kind-interface">RequestMeta</a></h5>
+<div class="tsd-comment tsd-typography"><p>Request metadata such as idempotency controls</p>
+</div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Cancelled order object</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found, already completed, or cannot be cancelled</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example">Example<a href="#example" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">cancel</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Order </span><span class="hl-3">${</span><span class="hl-4">order</span><span class="hl-11">.</span><span class="hl-4">id</span><span class="hl-3">}</span><span class="hl-2"> has been cancelled`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see">See<a href="#see" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="https://studio.inttegro.com/order-lifecycle">https://studio.inttegro.com/order-lifecycle</a> for order states</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L531">src/resources/orders.ts:531</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="complete"><span>complete</span><a href="#complete" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="complete-1"><span class="tsd-kind-call-signature">complete</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.CompleteOrderRequest.html" class="tsd-signature-type tsd-kind-interface">CompleteOrderRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#complete-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Mark an order as completed, indicating fulfillment is done.</p>
+<p>Call this after you've shipped physical goods or delivered digital products to the customer.
+Completing an order transitions it to its final state and can optionally mark payment as received
+offline (out-of-band) if <code>paidOutOfBand</code> is set to true.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.CompleteOrderRequest.html" class="tsd-signature-type tsd-kind-interface">CompleteOrderRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Completion parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Complete order request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Order ID to complete</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="paidoutofband"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">paidOutOfBand</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>Whether payment was collected out of band</p>
+</div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Completed order object</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-1">Throws<a href="#throws-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found, not paid, or already completed</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-1">Example<a href="#example-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Complete order after fulfillment</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">complete</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Order completed at: </span><span class="hl-3">${</span><span class="hl-4">order</span><span class="hl-11">.</span><span class="hl-4">completedAt</span><span class="hl-3">}</span><span class="hl-2">`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-2">Example<a href="#example-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Complete order with offline payment</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">result</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">complete</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">paidOutOfBand:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-1">See<a href="#see-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="https://studio.inttegro.com/order-lifecycle">https://studio.inttegro.com/order-lifecycle</a> for order states</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L498">src/resources/orders.ts:498</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="confirmpayment"><span>confirm<wbr/>Payment</span><a href="#confirmpayment" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="confirmpayment-1"><span class="tsd-kind-call-signature">confirmPayment</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.ConfirmPaymentRequest.html" class="tsd-signature-type tsd-kind-interface">ConfirmPaymentRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#confirmpayment-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Confirm a pending payment using a verification token (e.g., OTP sent to customer's phone).</p>
+<p>Call this method when a payment requires customer confirmation and you've collected the verification
+token from the customer. The token is typically a 6-digit OTP sent via SMS or email to the customer.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.ConfirmPaymentRequest.html" class="tsd-signature-type tsd-kind-interface">ConfirmPaymentRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Confirmation parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Confirm payment request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="confirmationid"><span class="tsd-kind-property">confirmationId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Confirmation challenge being answered</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Order ID</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="paymentid"><span class="tsd-kind-property">paymentId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Payment being confirmed</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="requestmeta"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">requestMeta</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/types_requests.RequestMeta.html" class="tsd-signature-type tsd-kind-interface">RequestMeta</a></h5>
+<div class="tsd-comment tsd-typography"><p>Request metadata such as idempotency controls</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="token"><span class="tsd-kind-property">token</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Confirmation token (e.g., OTP)</p>
+</div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Updated order with payment status</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-2">Throws<a href="#throws-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If token is invalid, expired, or order not found</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-3">Example<a href="#example-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// After receiving OTP from customer</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">confirmPayment</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">paymentId:</span><span class="hl-1"> </span><span class="hl-2">&#39;py_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">confirmationId:</span><span class="hl-1"> </span><span class="hl-2">&#39;pc_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMN&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">token:</span><span class="hl-1"> </span><span class="hl-2">&#39;123456&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-5">if</span><span class="hl-1"> (</span><span class="hl-4">order</span><span class="hl-1">.</span><span class="hl-4">payment</span><span class="hl-1">?.</span><span class="hl-4">status</span><span class="hl-1"> === </span><span class="hl-2">&#39;paid&#39;</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">&#39;Payment confirmed successfully!&#39;</span><span class="hl-1">);</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-2">See<a href="#see-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="https://studio.inttegro.com/accept-a-payment">https://studio.inttegro.com/accept-a-payment</a> for complete payment flow</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L338">src/resources/orders.ts:338</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="create"><span>create</span><a href="#create" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="create-1"><span class="tsd-kind-call-signature">create</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../types/types_orders.CreateOrderRequest.html" class="tsd-signature-type tsd-kind-type-alias">CreateOrderRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#create-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Create a new order with line items, customer, and optional payment details.</p>
+<p>Creates an order representing a purchase. Supports two flows:</p>
+<ol>
+<li>New customer: Provide <code>customerData</code> to create a new customer and order</li>
+<li>Existing customer: Provide <code>customerId</code> and optionally <code>paymentMethodId</code> for known customers</li>
+</ol>
+<p>Set <code>executePayment</code> to <code>true</code> to immediately charge the customer after order creation. The order can
+be configured with checkout redirect URLs for hosted payment flows.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../types/types_orders.CreateOrderRequest.html" class="tsd-signature-type tsd-kind-type-alias">CreateOrderRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Order creation parameters</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Created order with customer, line items, payment intent (if applicable), and optional redirect URL</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-3">Throws<a href="#throws-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If required fields are missing or invalid</p>
+</div>
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-4">Throws<a href="#throws-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If the API request fails</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-4">Example<a href="#example-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Create order with new customer and execute payment</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">create</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">requestMeta:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">idempotencyKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;order_2025_001&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  </span><span class="hl-4">executePayment:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">customerData:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">name:</span><span class="hl-1"> </span><span class="hl-2">&#39;Gloria Kesewaa&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">emailAddress:</span><span class="hl-1"> </span><span class="hl-2">&#39;gloria@example.com&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">phoneNumber:</span><span class="hl-1"> </span><span class="hl-2">&#39;+233544998605&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  </span><span class="hl-4">paymentMethodData:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;mobile_money&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">mobileMoney:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-4">network:</span><span class="hl-1"> </span><span class="hl-2">&#39;mtn&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">accountNumber:</span><span class="hl-1"> </span><span class="hl-2">&#39;0544998605&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">  </span><span class="hl-4">lineItems:</span><span class="hl-1"> [{</span><br/><span class="hl-1">    </span><span class="hl-4">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;product&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">product:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-4">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;physical&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">name:</span><span class="hl-1"> </span><span class="hl-2">&#39;Utility Sneakers&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">quantity:</span><span class="hl-1"> </span><span class="hl-7">1</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">price:</span><span class="hl-1"> { </span><span class="hl-4">currency:</span><span class="hl-1"> </span><span class="hl-2">&#39;ghs&#39;</span><span class="hl-1">, </span><span class="hl-4">value:</span><span class="hl-1"> </span><span class="hl-7">20000</span><span class="hl-1"> },</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  }],</span><br/><span class="hl-1">  </span><span class="hl-4">checkoutSettings:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">redirectUrl:</span><span class="hl-1"> </span><span class="hl-2">&#39;https://example.com/order/complete&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">cancelUrl:</span><span class="hl-1"> </span><span class="hl-2">&#39;https://example.com/order/cancelled&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Created order: </span><span class="hl-3">${</span><span class="hl-4">order</span><span class="hl-11">.</span><span class="hl-4">id</span><span class="hl-3">}</span><span class="hl-2">`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-5">Example<a href="#example-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Create order with existing customer for later payment</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">create</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">customerId:</span><span class="hl-1"> </span><span class="hl-2">&#39;cu_abc123&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">lineItems:</span><span class="hl-1"> [{</span><br/><span class="hl-1">    </span><span class="hl-4">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;product&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">product:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-4">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;digital&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">name:</span><span class="hl-1"> </span><span class="hl-2">&#39;Premium Subscription&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">quantity:</span><span class="hl-1"> </span><span class="hl-7">1</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">price:</span><span class="hl-1"> { </span><span class="hl-4">currency:</span><span class="hl-1"> </span><span class="hl-2">&#39;ghs&#39;</span><span class="hl-1">, </span><span class="hl-4">value:</span><span class="hl-1"> </span><span class="hl-7">5000</span><span class="hl-1"> },</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  }],</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-3">See<a href="#see-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<li><a href="https://studio.inttegro.com/accept-a-payment">https://studio.inttegro.com/accept-a-payment</a> for payment flow guide</li>
+<li><a href="https://studio.inttegro.com/order-lifecycle">https://studio.inttegro.com/order-lifecycle</a> for order states</li>
+</ul>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L162">src/resources/orders.ts:162</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="createwithresponse"><span>create<wbr/>With<wbr/>Response</span><a href="#createwithresponse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="createwithresponse-1"><span class="tsd-kind-call-signature">createWithResponse</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../types/types_orders.CreateOrderRequest.html" class="tsd-signature-type tsd-kind-type-alias">CreateOrderRequest</a><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroResponse.html" class="tsd-signature-type tsd-kind-interface">InttegroResponse</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#createwithresponse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Create a new order and keep native HTTP response facts with the decoded order.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../types/types_orders.CreateOrderRequest.html" class="tsd-signature-type tsd-kind-type-alias">CreateOrderRequest</a></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroResponse.html" class="tsd-signature-type tsd-kind-interface">InttegroResponse</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L172">src/resources/orders.ts:172</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="finalize"><span>finalize</span><a href="#finalize" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="finalize-1"><span class="tsd-kind-call-signature">finalize</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.FinalizeOrderRequest.html" class="tsd-signature-type tsd-kind-interface">FinalizeOrderRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#finalize-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Finalize an order to make it immutable and ready for payment or fulfillment.</p>
+<p>Finalizing (sealing) an order locks its line items and totals, making it ready for payment execution
+or order completion. Most orders are finalized automatically, but you can explicitly finalize an
+order if needed.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.FinalizeOrderRequest.html" class="tsd-signature-type tsd-kind-interface">FinalizeOrderRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Finalization parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Finalize order request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Order ID to finalize</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="requestmeta"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">requestMeta</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/types_requests.RequestMeta.html" class="tsd-signature-type tsd-kind-interface">RequestMeta</a></h5>
+<div class="tsd-comment tsd-typography"><p>Request metadata such as idempotency controls</p>
+</div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Finalized order object</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-5">Throws<a href="#throws-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found or already finalized</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-6">Example<a href="#example-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">finalize</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Order finalized at: </span><span class="hl-3">${</span><span class="hl-4">order</span><span class="hl-11">.</span><span class="hl-4">sealedAt</span><span class="hl-3">}</span><span class="hl-2">`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-4">See<a href="#see-4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="https://studio.inttegro.com/order-lifecycle">https://studio.inttegro.com/order-lifecycle</a> for order states</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L416">src/resources/orders.ts:416</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="lookup"><span>lookup</span><a href="#lookup" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="lookup-1"><span class="tsd-kind-call-signature">lookup</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.LookupOrderRequest.html" class="tsd-signature-type tsd-kind-interface">LookupOrderRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#lookup-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Retrieve an existing order by its ID.</p>
+<p>Returns full order details including customer, line items, payment state, and invoice information.
+Use this to check order status, retrieve payment details, or display order confirmation to customers.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.LookupOrderRequest.html" class="tsd-signature-type tsd-kind-interface">LookupOrderRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Lookup parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Lookup order request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Order ID to lookup</p>
+</div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Complete order object with all related data</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-6">Throws<a href="#throws-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found or request fails</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-7">Example<a href="#example-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">lookup</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Order status: </span><span class="hl-3">${</span><span class="hl-4">order</span><span class="hl-11">.</span><span class="hl-4">status</span><span class="hl-3">}</span><span class="hl-2">`</span><span class="hl-1">);</span><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Payment status: </span><span class="hl-3">${</span><span class="hl-4">order</span><span class="hl-11">.</span><span class="hl-4">payment</span><span class="hl-11">?.</span><span class="hl-4">status</span><span class="hl-3">}</span><span class="hl-2">`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-5">See<a href="#see-5" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="https://studio.inttegro.com/orders">https://studio.inttegro.com/orders</a> for API reference</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L203">src/resources/orders.ts:203</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="page"><span>page</span><a href="#page" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="page-1"><span class="tsd-kind-call-signature">page</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">?:</span> <a href="../interfaces/types_orders.PageOrdersRequest.html" class="tsd-signature-type tsd-kind-interface">PageOrdersRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.OrderPage.html" class="tsd-signature-type tsd-kind-interface">OrderPage</a><span class="tsd-signature-symbol">&gt;</span><a href="#page-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Retrieve a paginated list of orders.</p>
+<p>Returns orders in reverse chronological order (most recent first).</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.PageOrdersRequest.html" class="tsd-signature-type tsd-kind-interface">PageOrdersRequest</a><span class="tsd-signature-symbol"> = {}</span></span>
+<div class="tsd-comment tsd-typography"><p>Pagination and filter parameters (optional)</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Page orders request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="customerid"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">customerId</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5></li>
+<li class="tsd-parameter">
+<h5 id="pagenumber"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">pageNumber</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5></li>
+<li class="tsd-parameter">
+<h5 id="pagesize"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">pageSize</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.OrderPage.html" class="tsd-signature-type tsd-kind-interface">OrderPage</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Paginated list of orders with pagination details</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-7">Throws<a href="#throws-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If pagination parameters are invalid</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-8">Example<a href="#example-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Get first page of orders</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">page</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">page</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">pageSize:</span><span class="hl-1"> </span><span class="hl-7">25</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">pageNumber:</span><span class="hl-1"> </span><span class="hl-7">0</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">`Retrieved </span><span class="hl-3">${</span><span class="hl-4">page</span><span class="hl-11">.</span><span class="hl-4">orders</span><span class="hl-11">?.</span><span class="hl-4">length</span><span class="hl-11"> </span><span class="hl-1">??</span><span class="hl-11"> </span><span class="hl-7">0</span><span class="hl-3">}</span><span class="hl-2"> orders`</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-9">Example<a href="#example-9" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Restrict the page to one customer</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">customerOrders</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">page</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">customerId:</span><span class="hl-1"> </span><span class="hl-2">&#39;cu_123&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">pageSize:</span><span class="hl-1"> </span><span class="hl-7">50</span><span class="hl-1">,</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-6">See<a href="#see-6" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<li><a href="https://studio.inttegro.com/pagination">https://studio.inttegro.com/pagination</a> for pagination guide</li>
+<li><a href="https://studio.inttegro.com/orders">https://studio.inttegro.com/orders</a> for API reference</li>
+</ul>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L576">src/resources/orders.ts:576</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="pay"><span>pay</span><a href="#pay" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="pay-1"><span class="tsd-kind-call-signature">pay</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../types/types_orders.PayOrder.html" class="tsd-signature-type tsd-kind-type-alias">PayOrder</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#pay-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Initiate payment for an existing order.</p>
+<p>Supports three payment flows:</p>
+<ol>
+<li>Saved payment method: Provide only <code>orderId</code> to charge a previously saved payment method</li>
+<li>New payment method: Include <code>paymentMethodData</code> with inline payment details (mobile money, card, etc.)</li>
+<li>Offline payment: Set <code>paidOutOfBand</code> to true for cash, bank transfer, or check payments</li>
+</ol>
+<p>When payment requires customer confirmation (e.g., OTP), the returned order includes a <code>nextAction</code> field
+indicating what the customer needs to do. Call <code>confirmPayment()</code> once the customer provides the token.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../types/types_orders.PayOrder.html" class="tsd-signature-type tsd-kind-type-alias">PayOrder</a></span>
+<div class="tsd-comment tsd-typography"><p>Payment parameters</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Updated order with typed payment and next-action state</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-8">Throws<a href="#throws-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found or payment fails</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-10">Example<a href="#example-10" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Pay with inline mobile money</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">pay</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">paymentMethodData:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">type:</span><span class="hl-1"> </span><span class="hl-2">&#39;mobile_money&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">mobileMoney:</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-4">network:</span><span class="hl-1"> </span><span class="hl-2">&#39;mtn&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      </span><span class="hl-4">accountNumber:</span><span class="hl-1"> </span><span class="hl-2">&#39;0544998605&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">    },</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-5">if</span><span class="hl-1"> (</span><span class="hl-4">order</span><span class="hl-1">.</span><span class="hl-4">payment</span><span class="hl-1">?.</span><span class="hl-4">nextAction</span><span class="hl-1">?.</span><span class="hl-4">type</span><span class="hl-1"> === </span><span class="hl-2">&#39;confirm_payment&#39;</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-10">// Customer needs to provide OTP sent to their phone</span><br/><span class="hl-1">  </span><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">token</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-0">promptCustomerForOTP</span><span class="hl-1">();</span><br/><span class="hl-1">  </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">confirmPayment</span><span class="hl-1">({</span><br/><span class="hl-1">    </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-4">order</span><span class="hl-1">.</span><span class="hl-4">id</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">paymentId:</span><span class="hl-1"> </span><span class="hl-4">order</span><span class="hl-1">.</span><span class="hl-4">payment</span><span class="hl-1">.</span><span class="hl-4">id</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">confirmationId:</span><span class="hl-1"> </span><span class="hl-4">order</span><span class="hl-1">.</span><span class="hl-4">payment</span><span class="hl-1">.</span><span class="hl-4">nextAction</span><span class="hl-1">.</span><span class="hl-4">confirmPayment</span><span class="hl-1">.</span><span class="hl-4">request</span><span class="hl-1">.</span><span class="hl-4">id</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-4">token</span><span class="hl-1">,</span><br/><span class="hl-1">  });</span><br/><span class="hl-1">}</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-11">Example<a href="#example-11" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Pay with saved payment method</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">pay</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">paymentMethodId:</span><span class="hl-1"> </span><span class="hl-2">&#39;pm_xyz123abc456&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">requestMeta:</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">idempotencyKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;order_initial_charge_001&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  },</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-12">Example<a href="#example-12" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Mark as paid offline (cash, bank transfer, etc.)</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">pay</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">paidOutOfBand:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-7">See<a href="#see-7" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><ul>
+<li><a href="https://studio.inttegro.com/accept-a-payment">https://studio.inttegro.com/accept-a-payment</a> for payment flow guide</li>
+<li><a href="https://studio.inttegro.com/charge-repeat-customers">https://studio.inttegro.com/charge-repeat-customers</a> for saved payment methods</li>
+</ul>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L295">src/resources/orders.ts:295</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="requestconfirmation"><span>request<wbr/>Confirmation</span><a href="#requestconfirmation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="requestconfirmation-1"><span class="tsd-kind-call-signature">requestConfirmation</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.RequestConfirmationRequest.html" class="tsd-signature-type tsd-kind-interface">RequestConfirmationRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#requestconfirmation-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Request a new confirmation token to be sent to the customer (e.g., resend OTP).</p>
+<p>Use this when the customer didn't receive the original OTP or the token expired. A fresh verification
+token will be sent via SMS or email to the customer's registered contact information.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.RequestConfirmationRequest.html" class="tsd-signature-type tsd-kind-interface">RequestConfirmationRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Request parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Request confirmation request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+<div class="tsd-comment tsd-typography"><p>Order ID</p>
+</div></li>
+<li class="tsd-parameter">
+<h5 id="requestmeta"><code class="tsd-tag">Optional</code><span class="tsd-kind-property">requestMeta</span><span class="tsd-signature-symbol">?: </span><a href="../interfaces/types_requests.RequestMeta.html" class="tsd-signature-type tsd-kind-interface">RequestMeta</a></h5>
+<div class="tsd-comment tsd-typography"><p>Request metadata such as idempotency controls</p>
+</div></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><p>Updated order</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-9">Throws<a href="#throws-9" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found or not in confirmable state</p>
+</div>
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-13">Example<a href="#example-13" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-10">// Resend OTP to customer</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">requestConfirmation</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">orderId:</span><span class="hl-1"> </span><span class="hl-2">&#39;GKj7A8lM5wEGRUvbqpI4bkDFsQvpqVyh5fqePNnb&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">&#39;New OTP sent to customer&#39;</span><span class="hl-1">);</span>
+</code><button type="button">Copy</button></pre>
+
+</div>
+<div class="tsd-tag-see">
+<h4 class="tsd-anchor-link" id="see-8">See<a href="#see-8" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p><a href="https://studio.inttegro.com/accept-a-payment">https://studio.inttegro.com/accept-a-payment</a> for payment confirmation flow</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L378">src/resources/orders.ts:378</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="sendinvoice"><span>send<wbr/>Invoice</span><a href="#sendinvoice" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="sendinvoice-1"><span class="tsd-kind-call-signature">sendInvoice</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.OrderDocumentDeliveryRequest.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryRequest</a><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.OrderDocumentDeliveryResult.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#sendinvoice-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Send the hosted invoice link for an existing order to the customer.</p>
+<p>Inttegro delivers the invoice link to every contact method available on the order customer.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.OrderDocumentDeliveryRequest.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Send invoice parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Send order document request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.OrderDocumentDeliveryResult.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryResult</a><span class="tsd-signature-symbol">&gt;</span></h4><p>The order and document delivery details</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-10">Throws<a href="#throws-10" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found, customer has no contact method, or delivery fails</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L436">src/resources/orders.ts:436</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="sendreceipt"><span>send<wbr/>Receipt</span><a href="#sendreceipt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="sendreceipt-1"><span class="tsd-kind-call-signature">sendReceipt</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.OrderDocumentDeliveryRequest.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryRequest</a><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.OrderDocumentDeliveryResult.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryResult</a><span class="tsd-signature-symbol">&gt;</span><a href="#sendreceipt-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Send the hosted receipt link for a paid order to the customer.</p>
+<p>Inttegro delivers receipts only after the order has been paid.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.OrderDocumentDeliveryRequest.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryRequest</a></span>
+<div class="tsd-comment tsd-typography"><p>Send receipt parameters</p>
+</div>
+<div class="tsd-comment tsd-typography"><p>Send order document request</p>
+</div>
+<ul class="tsd-parameters">
+<li class="tsd-parameter">
+<h5 id="orderid"><span class="tsd-kind-property">orderId</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li></ul></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.OrderDocumentDeliveryResult.html" class="tsd-signature-type tsd-kind-interface">OrderDocumentDeliveryResult</a><span class="tsd-signature-symbol">&gt;</span></h4><p>The order and document delivery details</p>
+
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws-11">Throws<a href="#throws-11" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If order not found, unpaid, customer has no contact method, or delivery fails</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L455">src/resources/orders.ts:455</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="update"><span>update</span><a href="#update" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="update-1"><span class="tsd-kind-call-signature">update</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">request</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/types_orders.UpdateOrderRequest.html" class="tsd-signature-type tsd-kind-interface">UpdateOrderRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span><a href="#update-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Update mutable order metadata, line items, invoice settings, or attached payment method.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">request</span>: <a href="../interfaces/types_orders.UpdateOrderRequest.html" class="tsd-signature-type tsd-kind-interface">UpdateOrderRequest</a></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/types_orders.Order.html" class="tsd-signature-type tsd-kind-interface">Order</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/cf91011ccc9b298c900d5b5cd9cc9a8443b0c135/src/resources/orders.ts#L215">src/resources/orders.ts:215</a></li></ul></aside></div></li></ul></section></section></details></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
+<div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
+<div><a href="#cancel"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>cancel</span></a><a href="#complete"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>complete</span></a><a href="#confirmpayment"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>confirm<wbr/>Payment</span></a><a href="#create"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create</span></a><a href="#createwithresponse"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>With<wbr/>Response</span></a><a href="#finalize"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>finalize</span></a><a href="#lookup"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>lookup</span></a><a href="#page"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>page</span></a><a href="#pay"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>pay</span></a><a href="#requestconfirmation"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>request<wbr/>Confirmation</span></a><a href="#sendinvoice"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Invoice</span></a><a href="#sendreceipt"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>send<wbr/>Receipt</span></a><a href="#update"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update</span></a></div></details></div></details></div>
+<div class="site-menu">
+<nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://studio.inttegro.com/sdks" class="tsd-nav-link">Studio</a><a href="https://github.com/inttegro/inttegro-sdk-typescript" class="tsd-nav-link">GitHub</a></nav>
+<nav class="tsd-navigation"><a href="../modules.html">Inttegro TypeScript SDK - v10.0.0</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>
