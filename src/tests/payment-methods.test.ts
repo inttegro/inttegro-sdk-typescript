@@ -14,7 +14,7 @@ describe('PaymentMethods', () => {
 
   it('should page and update payment methods', async () => {
     const mockResponse = {
-      paymentMethod: { id: 'pm_123', customerId: 'cu_123' },
+      paymentMethod: { id: 'pm_123', customerId: 'cu_123', fingerprint: 'ifp_v1_app_customer' },
       page: { number: 1, size: 20, paymentMethods: [] },
     };
     const postSpy = vi.spyOn(httpClient, 'post').mockResolvedValue(mockResponse);
@@ -26,6 +26,7 @@ describe('PaymentMethods', () => {
     });
 
     expect(result).toEqual(mockResponse.paymentMethod);
+    expect(result.fingerprint).toBe('ifp_v1_app_customer');
     expect(postSpy).toHaveBeenCalledWith('/payment_methods/page', {
       customerId: 'cu_123',
       pageNumber: 1,
@@ -38,7 +39,7 @@ describe('PaymentMethods', () => {
   });
 
   it('should activate, disactivate, archive, and unarchive payment methods', async () => {
-    const mockResponse = { paymentMethod: { id: 'pm_123', customerId: 'cu_123' } };
+    const mockResponse = { paymentMethod: { id: 'pm_123', customerId: 'cu_123', fingerprint: '' } };
     const postSpy = vi.spyOn(httpClient, 'post').mockResolvedValue(mockResponse);
 
     await paymentMethods.activate({ paymentMethodId: 'pm_123' });
@@ -47,6 +48,7 @@ describe('PaymentMethods', () => {
     const result = await paymentMethods.unarchive({ paymentMethodId: 'pm_123' });
 
     expect(result).toEqual(mockResponse.paymentMethod);
+    expect(result.fingerprint).toBe('');
     expect(postSpy).toHaveBeenCalledWith('/payment_methods/activate', {
       paymentMethodId: 'pm_123',
     });

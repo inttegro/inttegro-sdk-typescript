@@ -100,6 +100,7 @@ export interface PaymentMethod {
   customData?: CustomData | null;
   ephemeral?: boolean;
   expiresOn?: Date | null;
+  fingerprint: string;
   createdAt: Date;
   verifiedAt?: Date | null;
 }
