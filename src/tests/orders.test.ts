@@ -64,6 +64,60 @@ describe('Orders', () => {
       expect(postSpy).toHaveBeenCalledWith('/orders/create', expect.any(Object));
     });
 
+    it('should create an order with catalog product and price references', async () => {
+      const postSpy = vi.spyOn(httpClient, 'post').mockResolvedValue(mockCreateOrderResponse);
+
+      await orders.create({
+        customerData: {
+          name: 'John Doe',
+          emailAddress: 'john@example.com',
+          phoneNumber: '0559714200',
+        },
+        lineItems: [
+          {
+            type: 'product',
+            product: {
+              productId: 'prod_123',
+              priceId: 'pr_123',
+              quantity: 2,
+            },
+          },
+          {
+            type: 'product',
+            product: {
+              productId: 'prod_456',
+              price: { currency: 'ghs', value: 1500 },
+              quantity: 1,
+            },
+          },
+        ],
+      });
+
+      expect(postSpy).toHaveBeenCalledWith(
+        '/orders/create',
+        expect.objectContaining({
+          lineItems: [
+            {
+              type: 'product',
+              product: {
+                productId: 'prod_123',
+                priceId: 'pr_123',
+                quantity: 2,
+              },
+            },
+            {
+              type: 'product',
+              product: {
+                productId: 'prod_456',
+                price: { currency: 'ghs', value: 1500 },
+                quantity: 1,
+              },
+            },
+          ],
+        })
+      );
+    });
+
     it('should create an order with response metadata', async () => {
       const headers = new Headers({
         'x-request-id': 'req_123',

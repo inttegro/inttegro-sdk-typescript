@@ -30,6 +30,36 @@ describe('TypeScript API casing properties', () => {
       })
     );
   });
+
+  it('serializes catalog-backed order line item references', () => {
+    const body = JSON.parse(
+      serializeRequestBody({
+        lineItems: [
+          {
+            type: 'product',
+            product: {
+              productId: 'prod_123',
+              priceId: 'pr_123',
+              quantity: 1,
+            },
+          },
+        ],
+      })
+    );
+
+    expect(body).toEqual({
+      line_items: [
+        {
+          type: 'product',
+          product: {
+            product_id: 'prod_123',
+            price_id: 'pr_123',
+            quantity: 1,
+          },
+        },
+      ],
+    });
+  });
 });
 
 function requestValue() {
