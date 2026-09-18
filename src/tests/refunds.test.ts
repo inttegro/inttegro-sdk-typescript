@@ -88,3 +88,28 @@ describe('Refund settlement contract', () => {
     expect(paymentMethod.paymentMethod.mobileMoney.accountNumber).toBe('****7831');
   });
 });
+
+describe('Refund order line item contract', () => {
+  it('models product, fee, and shipping snapshots as a discriminated union', () => {
+    const product: NonNullable<Refund['lineItems'][number]['orderLineItem']> = {
+      id: 'oli_product',
+      type: 'product',
+      quantity: 2,
+      product: { id: 'prod_123', name: 'Premium subscription' },
+    };
+    const fee: NonNullable<Refund['lineItems'][number]['orderLineItem']> = {
+      id: 'oli_fee',
+      type: 'fee',
+      fee: { label: 'Processing fee' },
+    };
+    const shipping: NonNullable<Refund['lineItems'][number]['orderLineItem']> = {
+      id: 'oli_shipping',
+      type: 'shipping',
+      shipping: { description: 'Standard delivery' },
+    };
+
+    expect(product.product.id).toBe('prod_123');
+    expect(fee.fee.label).toBe('Processing fee');
+    expect(shipping.shipping.description).toBe('Standard delivery');
+  });
+});

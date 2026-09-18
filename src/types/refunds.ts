@@ -83,6 +83,34 @@ export type RefundSettlement =
       paymentMethod: RefundSettlementPaymentMethod;
     };
 
+export interface RefundOrderLineItemProduct {
+  id?: string;
+  name: string;
+}
+
+export interface RefundOrderLineItemAdjustment {
+  label?: string;
+  description?: string;
+}
+
+export type RefundOrderLineItem =
+  | {
+      id: string;
+      type: 'product';
+      quantity: number;
+      product: RefundOrderLineItemProduct;
+    }
+  | {
+      id: string;
+      type: 'fee';
+      fee: RefundOrderLineItemAdjustment;
+    }
+  | {
+      id: string;
+      type: 'shipping';
+      shipping: RefundOrderLineItemAdjustment;
+    };
+
 export interface CreateRefundLineItem {
   orderLineItemId: string;
   refundAmount: AmountParams;
@@ -117,7 +145,9 @@ export interface PageRefundsRequest {
 
 export interface RefundLineItem {
   id: string;
+  /** @deprecated Use orderLineItem.id. */
   orderLineItemId: string;
+  orderLineItem?: RefundOrderLineItem;
   originalAmountPaid: Amount;
   refundAmount: Amount;
   reason?: RefundReason;
