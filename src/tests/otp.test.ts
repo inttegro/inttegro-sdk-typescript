@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { Otp } from '../resources/otp';
 import { HttpClient } from '../http-client';
+import { OtpPurposes } from '../types/otp';
 
 describe('Otp', () => {
   let otp: Otp;
@@ -17,6 +18,7 @@ describe('Otp', () => {
       .mockResolvedValue({ transaction: { id: 'ot_123' } } as any);
     const payload = {
       recipient: '+233123',
+      purpose: OtpPurposes.SignIn,
       sender: 'Acme',
       serviceName: 'Acme Bank',
     };
