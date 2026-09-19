@@ -43,6 +43,10 @@ export type OrderCreatedFromResourceType =
  * Product line item
  */
 export interface ProductLineItemParams {
+  /** Catalog product IDs are not valid on an inline product snapshot. */
+  productId?: never;
+  /** Catalog price IDs are not valid on an inline product snapshot. */
+  priceId?: never;
   /** Internal product ID for reconciliation */
   id?: string;
   /** Product type */
@@ -62,6 +66,47 @@ export interface ProductLineItemParams {
   /** Arbitrary custom data */
   customData?: CustomData;
 }
+
+/** Catalog product line item with a transaction-specific price. */
+export interface CatalogProductWithPriceDataParams {
+  /** Existing catalog product to snapshot onto the order line item. */
+  productId: string;
+  /** How many units of the catalog product the customer is purchasing. */
+  quantity: number;
+  /** Explicit price for this transaction. */
+  price: PriceParams;
+  priceId?: never;
+  id?: never;
+  type?: never;
+  about?: never;
+  reference?: never;
+  name?: never;
+  taxCode?: never;
+  customData?: never;
+}
+
+/** Catalog product line item using an existing price belonging to the product. */
+export interface CatalogProductWithPriceReferenceParams {
+  /** Existing catalog product to snapshot onto the order line item. */
+  productId: string;
+  /** Existing active price belonging to the catalog product. */
+  priceId: string;
+  /** How many units of the catalog product the customer is purchasing. */
+  quantity: number;
+  price?: never;
+  id?: never;
+  type?: never;
+  about?: never;
+  reference?: never;
+  name?: never;
+  taxCode?: never;
+  customData?: never;
+}
+
+export type ProductDetailsParams =
+  | ProductLineItemParams
+  | CatalogProductWithPriceDataParams
+  | CatalogProductWithPriceReferenceParams;
 
 /**
  * Fee line item
@@ -97,7 +142,7 @@ export interface ShippingLineItemParams {
 export type LineItemParams =
   | {
       type: 'product';
-      product: ProductLineItemParams;
+      product: ProductDetailsParams;
     }
   | {
       type: 'fee';
