@@ -117,3 +117,6 @@ export * from './file-references';
 
 // Refunds
 export * from './refunds';
+
+// Resource search
+export * from './search';

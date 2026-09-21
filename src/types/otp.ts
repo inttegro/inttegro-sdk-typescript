@@ -7,6 +7,23 @@ export const OtpAlphabetTypes = {
 } as const;
 export type OTPAlphabetType = (typeof OtpAlphabetTypes)[keyof typeof OtpAlphabetTypes];
 
+export const OtpPurposes = {
+  AccountCreation: 'account_creation',
+  AccountRecovery: 'account_recovery',
+  EmailVerification: 'email_verification',
+  FinancialAccountVerification: 'financial_account_verification',
+  PasswordReset: 'password_reset',
+  PaymentConfirmation: 'payment_confirmation',
+  PaymentMethodVerification: 'payment_method_verification',
+  PayoutConfirmation: 'payout_confirmation',
+  PhoneVerification: 'phone_verification',
+  SensitiveAction: 'sensitive_action',
+  SignIn: 'sign_in',
+  TransactionConfirmation: 'transaction_confirmation',
+  Unspecified: 'unspecified',
+} as const;
+export type OTPPurpose = (typeof OtpPurposes)[keyof typeof OtpPurposes];
+
 export const OtpStatuses = {
   Canceled: 'canceled',
   Expired: 'expired',
@@ -36,7 +53,7 @@ export interface InitiateOtpRequest {
   requestMeta?: RequestMeta;
   messageTemplate?: string;
   preferredGateway?: 'twilio' | 'vonage' | 'africas-talking' | 'termii' | string;
-  purpose?: string;
+  purpose: OTPPurpose;
   tokenAlphabet?: string;
   tokenAlphabetType?: OTPAlphabetType;
   tokenSize?: number;

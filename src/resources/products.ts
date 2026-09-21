@@ -8,6 +8,8 @@ import {
   ProductDefaultUnitPrice,
   ProductPage,
   ProductActionRequest,
+  ResourceSearchPage,
+  ResourceSearchRequest,
   SetDefaultUnitPriceRequest,
   UpdateProductRequest,
 } from '../types';
@@ -94,5 +96,9 @@ export class Products {
 
   async page(request: PageProductsRequest = {}): Promise<ProductPage> {
     return this.httpClient.postResource<ProductPage>('/products/page', 'page', request);
+  }
+
+  async search(request: ResourceSearchRequest): Promise<ResourceSearchPage> {
+    return this.httpClient.postResource<ResourceSearchPage>('/products/search', 'search', request);
   }
 }

@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [10.1.0] - 2026-09-21
+
+- Added typed search across customers, financial accounts, orders, payouts, and
+  products, including filters, facets, sorting, cursor pagination, totals, and
+  freshness metadata.
+- Added typed verification purposes for OTP initiation requests.
+
 ## [10.0.0] - 2026-09-14
 
 - **Breaking:** replaced payout records and generic payloads with named request,

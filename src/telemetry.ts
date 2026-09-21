@@ -86,6 +86,7 @@ const SAFE_ACTIONS = new Set([
   'review',
   'revoke',
   'schedule',
+  'search',
   'send',
   'send_invoice',
   'send_receipt',

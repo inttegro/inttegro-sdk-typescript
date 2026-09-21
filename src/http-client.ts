@@ -678,6 +678,7 @@ function isIdempotentMutationPath(pathOrUrl: string): boolean {
   return !new Set([
     'lookup',
     'page',
+    'search',
     'settings',
     'countries',
     'contents',

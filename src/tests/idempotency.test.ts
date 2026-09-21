@@ -39,10 +39,13 @@ describe('HttpClient idempotency', () => {
 
     const client = new HttpClient({ apiKey: 'sk_test', baseUrl: 'https://api.inttegro.com' });
     await client.post('/orders/lookup', { orderId: 'or_123', idempotencyKey: 'legacy' });
+    await client.post('/orders/search', { text: 'tea' });
 
-    const body = JSON.parse(calls[0].body as string);
-    expect(body.idempotency_key).toBeUndefined();
-    expect(body.request_meta).toBeUndefined();
+    for (const call of calls) {
+      const body = JSON.parse(call.body as string);
+      expect(body.idempotency_key).toBeUndefined();
+      expect(body.request_meta).toBeUndefined();
+    }
   });
 
   it('adds an Idempotency-Key header to mutating multipart requests', async () => {
