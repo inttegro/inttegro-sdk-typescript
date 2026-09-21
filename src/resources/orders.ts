@@ -54,6 +54,8 @@ import {
   PageOrdersRequest,
   Order,
   OrderPage,
+  ResourceSearchPage,
+  ResourceSearchRequest,
 } from '../types';
 import { validateRequired, throwIfValidationErrors } from '../utils/validation';
 
@@ -576,6 +578,10 @@ export class Orders {
   async page(request: PageOrdersRequest = {}): Promise<OrderPage> {
     const response = await this.httpClient.post<OrderPageEnvelope>('/orders/page', request);
     return response.page;
+  }
+
+  async search(request: ResourceSearchRequest): Promise<ResourceSearchPage> {
+    return this.httpClient.postResource<ResourceSearchPage>('/orders/search', 'search', request);
   }
 }
 

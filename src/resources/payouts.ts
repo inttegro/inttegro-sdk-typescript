@@ -7,6 +7,8 @@ import {
   PayoutPage,
   PayoutSettingsLookup,
   PayoutSettingsMutation,
+  ResourceSearchPage,
+  ResourceSearchRequest,
   SchedulePayoutRequest,
   SetPayoutDestinationsRequest,
 } from '../types';
@@ -60,6 +62,10 @@ export class Payouts {
     const errors = validateRequired(request as unknown as Record<string, unknown>, ['pageNumber']);
     throwIfValidationErrors(errors);
     return this.httpClient.postResource<PayoutPage>('/payouts/page', 'page', request);
+  }
+
+  async search(request: ResourceSearchRequest): Promise<ResourceSearchPage> {
+    return this.httpClient.postResource<ResourceSearchPage>('/payouts/search', 'search', request);
   }
 
   async schedule(request: SchedulePayoutRequest): Promise<Payout> {

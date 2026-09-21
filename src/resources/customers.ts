@@ -6,6 +6,8 @@ import {
   LookupCustomerRequest,
   PageCustomersRequest,
   RequestOptions,
+  ResourceSearchPage,
+  ResourceSearchRequest,
   UpdateCustomerRequest,
 } from '../types';
 import { throwIfValidationErrors, validateRequired } from '../utils/validation';
@@ -41,6 +43,10 @@ export class Customers {
 
   async page(request: PageCustomersRequest = {}): Promise<CustomerPage> {
     return this.httpClient.postResource<CustomerPage>('/customers/page', 'page', request);
+  }
+
+  async search(request: ResourceSearchRequest): Promise<ResourceSearchPage> {
+    return this.httpClient.postResource<ResourceSearchPage>('/customers/search', 'search', request);
   }
 }
 

@@ -8,6 +8,8 @@ import {
   LookupFinancialAccountRequest,
   PageFinancialAccountsRequest,
   ReconnectFinancialAccountRequest,
+  ResourceSearchPage,
+  ResourceSearchRequest,
   ToggleFinancialAccountRequest,
   UpdateFinancialAccountRequest,
   VerifyFinancialAccountRequest,
@@ -60,6 +62,14 @@ export class FinancialAccounts {
     return this.httpClient.postResource<FinancialAccountPage>(
       '/financial_accounts/page',
       'page',
+      request
+    );
+  }
+
+  async search(request: ResourceSearchRequest): Promise<ResourceSearchPage> {
+    return this.httpClient.postResource<ResourceSearchPage>(
+      '/financial_accounts/search',
+      'search',
       request
     );
   }
