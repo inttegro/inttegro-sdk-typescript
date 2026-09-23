@@ -89,9 +89,19 @@ export interface PayoutError {
   type: string;
 }
 
+/** A sparse view of one balance transaction's contribution to a payout. */
+export interface PayoutBalanceTransaction {
+  /** The exact portion allocated to this payout. */
+  allocatedAmount: Amount;
+  /** The balance transaction's original amount before allocations. */
+  amount: Amount;
+  /** Unique balance transaction identifier. */
+  id: string;
+}
+
 export interface Payout {
   amount?: Amount;
-  balanceTransactions?: string[];
+  balanceTransactions?: PayoutBalanceTransaction[];
   canceledAt?: Date;
   customData?: CustomData;
   destinationId: string;
