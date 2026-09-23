@@ -3,6 +3,7 @@ import { Payouts } from '../resources/payouts';
 import { HttpClient } from '../http-client';
 import type {
   Payout,
+  PayoutBalanceTransaction,
   PayoutDestinations,
   PayoutError,
   PayoutSettingsMutation,
@@ -73,7 +74,9 @@ describe('Payouts', () => {
   it('exposes canonical payout fields with concrete types', () => {
     expectTypeOf<Payout['executeAfter']>().toEqualTypeOf<Date>();
     expectTypeOf<Payout['error']>().toEqualTypeOf<PayoutError | undefined>();
-    expectTypeOf<Payout['balanceTransactions']>().toEqualTypeOf<string[] | undefined>();
+    expectTypeOf<Payout['balanceTransactions']>().toEqualTypeOf<
+      PayoutBalanceTransaction[] | undefined
+    >();
     expectTypeOf<PayoutSettingsMutation['destinations']>().toEqualTypeOf<
       PayoutDestinations | undefined
     >();

@@ -54,7 +54,8 @@ export interface BalanceTransactionPayoutAllocation extends BalanceTransactionAl
 }
 
 export type BalanceTransactionAllocation =
-  BalanceTransactionRefundAllocation | BalanceTransactionPayoutAllocation;
+  | BalanceTransactionRefundAllocation
+  | BalanceTransactionPayoutAllocation;
 
 interface BalanceTransactionBase {
   id: string;

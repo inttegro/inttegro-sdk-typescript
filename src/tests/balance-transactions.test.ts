@@ -22,22 +22,22 @@ describe('BalanceTransactions', () => {
         paymentId: 'py_123',
         orderId: 'or_123',
         amount: { currency: 'GHS', value: 2500 },
-	allocations: [
-	  {
-	    id: 'bta_123',
-	    type: 'payout',
-	    status: 'pending',
-	    payout: {
-	      id: 'po_123',
-	      amount: { currency: 'GHS', value: 1000 },
-	    },
-	    createdAt: '2026-08-31T12:01:00Z',
-	    updatedAt: '2026-08-31T12:01:00Z',
-	  },
-	],
-	availableAmount: { currency: 'GHS', value: 1500 },
-	pendingAmount: { currency: 'GHS', value: 1000 },
-	spentAmount: { currency: 'GHS', value: 0 },
+        allocations: [
+          {
+            id: 'bta_123',
+            type: 'payout',
+            status: 'pending',
+            payout: {
+              id: 'po_123',
+              amount: { currency: 'GHS', value: 1000 },
+            },
+            createdAt: '2026-08-31T12:01:00Z',
+            updatedAt: '2026-08-31T12:01:00Z',
+          },
+        ],
+        availableAmount: { currency: 'GHS', value: 1500 },
+        pendingAmount: { currency: 'GHS', value: 1000 },
+        spentAmount: { currency: 'GHS', value: 0 },
         createdAt: '2026-08-31T12:00:00Z',
       },
     };
