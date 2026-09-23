@@ -1,0 +1,400 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>InttegroClient | Inttegro TypeScript SDK - v11.0.0</title><meta name="description" content="Documentation for Inttegro TypeScript SDK"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">Inttegro TypeScript SDK - v11.0.0</a>
+<div id="tsd-toolbar-links"><a href="https://studio.inttegro.com/sdks">Studio</a><a href="https://github.com/inttegro/inttegro-sdk-typescript">GitHub</a></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb" aria-label="Breadcrumb">
+<li><a href="../modules/index.html">index</a></li>
+<li><a href="" aria-current="page">InttegroClient</a></li></ul>
+<h1>Class InttegroClient</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>Main Inttegro SDK client</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example">Example<a href="#example" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-5">import</span><span class="hl-1"> { </span><span class="hl-4">InttegroClient</span><span class="hl-1"> } </span><span class="hl-5">from</span><span class="hl-1"> </span><span class="hl-2">&#39;@inttegro/inttegro-sdk&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">inttegro</span><span class="hl-1"> = </span><span class="hl-3">new</span><span class="hl-1"> </span><span class="hl-0">InttegroClient</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">apiKey:</span><span class="hl-1"> </span><span class="hl-2">&#39;your-api-key&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">baseUrl:</span><span class="hl-1"> </span><span class="hl-2">&#39;https://api.inttegro.com&#39;</span><span class="hl-1">, </span><span class="hl-10">// optional</span><br/><span class="hl-1">  </span><span class="hl-4">timeout:</span><span class="hl-1"> </span><span class="hl-7">30000</span><span class="hl-1">, </span><span class="hl-10">// optional</span><br/><span class="hl-1">  </span><span class="hl-4">debug:</span><span class="hl-1"> </span><span class="hl-3">false</span><span class="hl-1">, </span><span class="hl-10">// optional</span><br/><span class="hl-1">});</span><br/><br/><span class="hl-10">// Use the orders resource</span><br/><span class="hl-3">const</span><span class="hl-1"> </span><span class="hl-6">order</span><span class="hl-1"> = </span><span class="hl-5">await</span><span class="hl-1"> </span><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-4">orders</span><span class="hl-1">.</span><span class="hl-0">create</span><span class="hl-1">({ ... });</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div></section><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L49">src/client.ts:49</a></li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h5 class="tsd-index-heading uppercase">Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="constructors">Constructors<a href="#constructors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="properties">Properties<a href="#properties" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#apps" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>apps</span></a>
+<a href="#balances" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>balances</span></a>
+<a href="#balancetransactions" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>balance<wbr/>Transactions</span></a>
+<a href="#broadcasts" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>broadcasts</span></a>
+<a href="#chimes" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>chimes</span></a>
+<a href="#customers" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>customers</span></a>
+<a href="#filelinks" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>file<wbr/>Links</span></a>
+<a href="#filereferences" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>file<wbr/>References</span></a>
+<a href="#files" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>files</span></a>
+<a href="#financialaccounts" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>financial<wbr/>Accounts</span></a>
+<a href="#keys" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>keys</span></a>
+<a href="#messagetemplates" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>message<wbr/>Templates</span></a>
+<a href="#orders" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>orders</span></a>
+<a href="#otp" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>otp</span></a>
+<a href="#paymentmethods" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>payment<wbr/>Methods</span></a>
+<a href="#payouts" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>payouts</span></a>
+<a href="#prices" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>prices</span></a>
+<a href="#products" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>products</span></a>
+<a href="#purchaseintents" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>purchase<wbr/>Intents</span></a>
+<a href="#refunds" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>refunds</span></a>
+<a href="#schedules" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>schedules</span></a>
+<a href="#spec" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>spec</span></a>
+<a href="#uploadrequests" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upload<wbr/>Requests</span></a>
+</div></section>
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="methods">Methods<a href="#methods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#addrequestinterceptor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Request<wbr/>Interceptor</span></a>
+<a href="#addresponseinterceptor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Response<wbr/>Interceptor</span></a>
+<a href="#postwithresponse" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>post<wbr/>With<wbr/>Response</span></a>
+<a href="#requestwithresponse" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>request<wbr/>With<wbr/>Response</span></a>
+<a href="#updateconfig" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Config</span></a>
+</div></section></div></details></section></section>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="constructors-1">Constructors<a href="#constructors-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="constructor"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="constructorinttegroclient"><span class="tsd-signature-keyword">new</span> <span class="tsd-kind-constructor-signature">InttegroClient</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">config</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/index.InttegroConfig.html" class="tsd-signature-type tsd-kind-interface">InttegroConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type tsd-kind-class">InttegroClient</a><a href="#constructorinttegroclient" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Create a new Inttegro SDK client</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">config</span>: <a href="../interfaces/index.InttegroConfig.html" class="tsd-signature-type tsd-kind-interface">InttegroConfig</a></span>
+<div class="tsd-comment tsd-typography"><p>Configuration options</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="" class="tsd-signature-type tsd-kind-class">InttegroClient</a></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-throws">
+<h4 class="tsd-anchor-link" id="throws">Throws<a href="#throws" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><p>If API key is not provided</p>
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L105">src/client.ts:105</a></li></ul></aside></div></li></ul></section></section></details>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="apps"><code class="tsd-tag">Readonly</code><span>apps</span><a href="#apps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">apps</span><span class="tsd-signature-symbol">:</span> <a href="resources_apps.Apps.html" class="tsd-signature-type tsd-kind-class">Apps</a></div>
+<div class="tsd-comment tsd-typography"><p>Apps resource for managing the authenticated application</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L77">src/client.ts:77</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="balances"><code class="tsd-tag">Readonly</code><span>balances</span><a href="#balances" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">balances</span><span class="tsd-signature-symbol">:</span> <a href="resources_balances.Balances.html" class="tsd-signature-type tsd-kind-class">Balances</a></div>
+<div class="tsd-comment tsd-typography"><p>Balances resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L85">src/client.ts:85</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="balancetransactions"><code class="tsd-tag">Readonly</code><span>balance<wbr/>Transactions</span><a href="#balancetransactions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">balanceTransactions</span><span class="tsd-signature-symbol">:</span> <a href="resources_balance-transactions.BalanceTransactions.html" class="tsd-signature-type tsd-kind-class">BalanceTransactions</a></div>
+<div class="tsd-comment tsd-typography"><p>Balance transactions resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L83">src/client.ts:83</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="broadcasts"><code class="tsd-tag">Readonly</code><span>broadcasts</span><a href="#broadcasts" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">broadcasts</span><span class="tsd-signature-symbol">:</span> <a href="resources_broadcasts.Broadcasts.html" class="tsd-signature-type tsd-kind-class">Broadcasts</a></div>
+<div class="tsd-comment tsd-typography"><p>Broadcasts resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L61">src/client.ts:61</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="chimes"><code class="tsd-tag">Readonly</code><span>chimes</span><a href="#chimes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">chimes</span><span class="tsd-signature-symbol">:</span> <a href="resources_chimes.Chimes.html" class="tsd-signature-type tsd-kind-class">Chimes</a></div>
+<div class="tsd-comment tsd-typography"><p>Chimes resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L57">src/client.ts:57</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="customers"><code class="tsd-tag">Readonly</code><span>customers</span><a href="#customers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">customers</span><span class="tsd-signature-symbol">:</span> <a href="resources_customers.Customers.html" class="tsd-signature-type tsd-kind-class">Customers</a></div>
+<div class="tsd-comment tsd-typography"><p>Customers resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L71">src/client.ts:71</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="filelinks"><code class="tsd-tag">Readonly</code><span>file<wbr/>Links</span><a href="#filelinks" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">fileLinks</span><span class="tsd-signature-symbol">:</span> <a href="resources_file-links.FileLinks.html" class="tsd-signature-type tsd-kind-class">FileLinks</a></div>
+<div class="tsd-comment tsd-typography"><p>File links resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L69">src/client.ts:69</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="filereferences"><code class="tsd-tag">Readonly</code><span>file<wbr/>References</span><a href="#filereferences" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">fileReferences</span><span class="tsd-signature-symbol">:</span> <a href="resources_file-references.FileReferences.html" class="tsd-signature-type tsd-kind-class">FileReferences</a></div>
+<div class="tsd-comment tsd-typography"><p>File references resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L95">src/client.ts:95</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="files"><code class="tsd-tag">Readonly</code><span>files</span><a href="#files" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">files</span><span class="tsd-signature-symbol">:</span> <a href="resources_files.Files.html" class="tsd-signature-type tsd-kind-class">Files</a></div>
+<div class="tsd-comment tsd-typography"><p>Files resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L67">src/client.ts:67</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="financialaccounts"><code class="tsd-tag">Readonly</code><span>financial<wbr/>Accounts</span><a href="#financialaccounts" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">financialAccounts</span><span class="tsd-signature-symbol">:</span> <a href="resources_financial-accounts.FinancialAccounts.html" class="tsd-signature-type tsd-kind-class">FinancialAccounts</a></div>
+<div class="tsd-comment tsd-typography"><p>Financial accounts resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L65">src/client.ts:65</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="keys"><code class="tsd-tag">Readonly</code><span>keys</span><a href="#keys" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">keys</span><span class="tsd-signature-symbol">:</span> <a href="resources_keys.Keys.html" class="tsd-signature-type tsd-kind-class">Keys</a></div>
+<div class="tsd-comment tsd-typography"><p>Secret keys resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L91">src/client.ts:91</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="messagetemplates"><code class="tsd-tag">Readonly</code><span>message<wbr/>Templates</span><a href="#messagetemplates" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">messageTemplates</span><span class="tsd-signature-symbol">:</span> <a href="resources_message-templates.MessageTemplates.html" class="tsd-signature-type tsd-kind-class">MessageTemplates</a></div>
+<div class="tsd-comment tsd-typography"><p>Message templates resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L63">src/client.ts:63</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="orders"><code class="tsd-tag">Readonly</code><span>orders</span><a href="#orders" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">orders</span><span class="tsd-signature-symbol">:</span> <a href="resources_orders.Orders.html" class="tsd-signature-type tsd-kind-class">Orders</a></div>
+<div class="tsd-comment tsd-typography"><p>Orders resource for managing orders</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L53">src/client.ts:53</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="otp"><code class="tsd-tag">Readonly</code><span>otp</span><a href="#otp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">otp</span><span class="tsd-signature-symbol">:</span> <a href="resources_otp.Otp.html" class="tsd-signature-type tsd-kind-class">Otp</a></div>
+<div class="tsd-comment tsd-typography"><p>OTP resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L55">src/client.ts:55</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="paymentmethods"><code class="tsd-tag">Readonly</code><span>payment<wbr/>Methods</span><a href="#paymentmethods" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">paymentMethods</span><span class="tsd-signature-symbol">:</span> <a href="resources_payment-methods.PaymentMethods.html" class="tsd-signature-type tsd-kind-class">PaymentMethods</a></div>
+<div class="tsd-comment tsd-typography"><p>Payment methods resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L79">src/client.ts:79</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="payouts"><code class="tsd-tag">Readonly</code><span>payouts</span><a href="#payouts" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">payouts</span><span class="tsd-signature-symbol">:</span> <a href="resources_payouts.Payouts.html" class="tsd-signature-type tsd-kind-class">Payouts</a></div>
+<div class="tsd-comment tsd-typography"><p>Payouts resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L81">src/client.ts:81</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="prices"><code class="tsd-tag">Readonly</code><span>prices</span><a href="#prices" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">prices</span><span class="tsd-signature-symbol">:</span> <a href="resources_prices.Prices.html" class="tsd-signature-type tsd-kind-class">Prices</a></div>
+<div class="tsd-comment tsd-typography"><p>Prices resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L75">src/client.ts:75</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="products"><code class="tsd-tag">Readonly</code><span>products</span><a href="#products" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">products</span><span class="tsd-signature-symbol">:</span> <a href="resources_products.Products.html" class="tsd-signature-type tsd-kind-class">Products</a></div>
+<div class="tsd-comment tsd-typography"><p>Products resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L73">src/client.ts:73</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="purchaseintents"><code class="tsd-tag">Readonly</code><span>purchase<wbr/>Intents</span><a href="#purchaseintents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">purchaseIntents</span><span class="tsd-signature-symbol">:</span> <a href="resources_purchase-intents.PurchaseIntents.html" class="tsd-signature-type tsd-kind-class">PurchaseIntents</a></div>
+<div class="tsd-comment tsd-typography"><p>Purchase intents resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L93">src/client.ts:93</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="refunds"><code class="tsd-tag">Readonly</code><span>refunds</span><a href="#refunds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">refunds</span><span class="tsd-signature-symbol">:</span> <a href="resources_refunds.Refunds.html" class="tsd-signature-type tsd-kind-class">Refunds</a></div>
+<div class="tsd-comment tsd-typography"><p>Refunds resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L97">src/client.ts:97</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="schedules"><code class="tsd-tag">Readonly</code><span>schedules</span><a href="#schedules" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">schedules</span><span class="tsd-signature-symbol">:</span> <a href="resources_schedules.Schedules.html" class="tsd-signature-type tsd-kind-class">Schedules</a></div>
+<div class="tsd-comment tsd-typography"><p>Schedules resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L59">src/client.ts:59</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="spec"><code class="tsd-tag">Readonly</code><span>spec</span><a href="#spec" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">spec</span><span class="tsd-signature-symbol">:</span> <a href="resources_spec.Spec.html" class="tsd-signature-type tsd-kind-class">Spec</a></div>
+<div class="tsd-comment tsd-typography"><p>Specifications resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L87">src/client.ts:87</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="uploadrequests"><code class="tsd-tag">Readonly</code><span>upload<wbr/>Requests</span><a href="#uploadrequests" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">uploadRequests</span><span class="tsd-signature-symbol">:</span> <a href="resources_upload-requests.UploadRequests.html" class="tsd-signature-type tsd-kind-class">UploadRequests</a></div>
+<div class="tsd-comment tsd-typography"><p>Upload requests resource</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L89">src/client.ts:89</a></li></ul></aside></section></section></details>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="methods-1">Methods<a href="#methods-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="addrequestinterceptor"><span>add<wbr/>Request<wbr/>Interceptor</span><a href="#addrequestinterceptor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="addrequestinterceptor-1"><span class="tsd-kind-call-signature">addRequestInterceptor</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">interceptor</span><span class="tsd-signature-symbol">:</span> <a href="../types/index.RequestInterceptor.html" class="tsd-signature-type tsd-kind-type-alias">RequestInterceptor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#addrequestinterceptor-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Add a request interceptor</p>
+<p>Request interceptors allow you to modify requests before they are sent.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">interceptor</span>: <a href="../types/index.RequestInterceptor.html" class="tsd-signature-type tsd-kind-type-alias">RequestInterceptor</a></span>
+<div class="tsd-comment tsd-typography"><p>Request interceptor function</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-1">Example<a href="#example-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-0">addRequestInterceptor</span><span class="hl-1">(</span><span class="hl-3">async</span><span class="hl-1"> (</span><span class="hl-4">url</span><span class="hl-1">, </span><span class="hl-4">options</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-10">// Add custom header</span><br/><span class="hl-1">  </span><span class="hl-4">options</span><span class="hl-1">.</span><span class="hl-4">headers</span><span class="hl-1"> = {</span><br/><span class="hl-1">    ...</span><span class="hl-4">options</span><span class="hl-1">.</span><span class="hl-4">headers</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-2">&#39;X-Custom-Header&#39;</span><span class="hl-4">:</span><span class="hl-1"> </span><span class="hl-2">&#39;value&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">  };</span><br/><span class="hl-1">  </span><span class="hl-5">return</span><span class="hl-1"> { </span><span class="hl-4">url</span><span class="hl-1">, </span><span class="hl-4">options</span><span class="hl-1"> };</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L172">src/client.ts:172</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="addresponseinterceptor"><span>add<wbr/>Response<wbr/>Interceptor</span><a href="#addresponseinterceptor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="addresponseinterceptor-1"><span class="tsd-kind-call-signature">addResponseInterceptor</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">interceptor</span><span class="tsd-signature-symbol">:</span> <a href="../types/index.ResponseInterceptor.html" class="tsd-signature-type tsd-kind-type-alias">ResponseInterceptor</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#addresponseinterceptor-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Add a response interceptor</p>
+<p>Response interceptors allow you to process responses before they are returned.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">interceptor</span>: <a href="../types/index.ResponseInterceptor.html" class="tsd-signature-type tsd-kind-type-alias">ResponseInterceptor</a></span>
+<div class="tsd-comment tsd-typography"><p>Response interceptor function</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-2">Example<a href="#example-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-0">addResponseInterceptor</span><span class="hl-1">(</span><span class="hl-3">async</span><span class="hl-1"> (</span><span class="hl-4">response</span><span class="hl-1">) </span><span class="hl-3">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-10">// Log response status</span><br/><span class="hl-1">  </span><span class="hl-4">console</span><span class="hl-1">.</span><span class="hl-0">log</span><span class="hl-1">(</span><span class="hl-2">&#39;Response status:&#39;</span><span class="hl-1">, </span><span class="hl-4">response</span><span class="hl-1">.</span><span class="hl-4">status</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-5">return</span><span class="hl-1"> </span><span class="hl-4">response</span><span class="hl-1">;</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L192">src/client.ts:192</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="postwithresponse"><span>post<wbr/>With<wbr/>Response</span><a href="#postwithresponse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="postwithresponse-1"><span class="tsd-kind-call-signature">postWithResponse</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#postwithresponset">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">body</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">RequestInit</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroResponse.html" class="tsd-signature-type tsd-kind-interface">InttegroResponse</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#postwithresponset">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#postwithresponse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Make a POST request and keep native HTTP response facts with the decoded body.</p>
+</div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li><span id="postwithresponset"><span class="tsd-kind-type-parameter">T</span></span></li></ul></section>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></span></li>
+<li><span><code class="tsd-tag">Optional</code><span class="tsd-kind-parameter">body</span>: <span class="tsd-signature-type">unknown</span></span></li>
+<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">RequestInit</span><span class="tsd-signature-symbol"> = {}</span></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroResponse.html" class="tsd-signature-type tsd-kind-interface">InttegroResponse</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#postwithresponset">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L210">src/client.ts:210</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="requestwithresponse"><span>request<wbr/>With<wbr/>Response</span><a href="#requestwithresponse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="requestwithresponse-1"><span class="tsd-kind-call-signature">requestWithResponse</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#requestwithresponset">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><br/>    <span class="tsd-kind-parameter">path</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span><br/>    <span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">RequestInit</span><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroResponse.html" class="tsd-signature-type tsd-kind-interface">InttegroResponse</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#requestwithresponset">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#requestwithresponse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Make a JSON request and keep native HTTP response facts with the decoded body.</p>
+<p>Prefer typed resource methods such as <code>orders.createWithResponse</code> when they
+exist. This lower-level helper is useful while response-envelope coverage is
+rolled out across every resource.</p>
+</div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li><span id="requestwithresponset"><span class="tsd-kind-type-parameter">T</span></span></li></ul></section>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">path</span>: <span class="tsd-signature-type">string</span></span></li>
+<li><span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">RequestInit</span><span class="tsd-signature-symbol"> = {}</span></span></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroResponse.html" class="tsd-signature-type tsd-kind-interface">InttegroResponse</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#requestwithresponset">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L203">src/client.ts:203</a></li></ul></aside></div></li></ul></section>
+<section class="tsd-panel tsd-member">
+<h3 class="tsd-anchor-link" id="updateconfig"><span>update<wbr/>Config</span><a href="#updateconfig" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures">
+<li class="">
+<div class="tsd-signature tsd-anchor-link" id="updateconfig-1"><span class="tsd-kind-call-signature">updateConfig</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">config</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroConfig.html" class="tsd-signature-type tsd-kind-interface">InttegroConfig</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">void</span><a href="#updateconfig-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Update SDK configuration</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li><span><span class="tsd-kind-parameter">config</span>: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.InttegroConfig.html" class="tsd-signature-type tsd-kind-interface">InttegroConfig</a><span class="tsd-signature-symbol">&gt;</span></span>
+<div class="tsd-comment tsd-typography"><p>Partial configuration to update</p>
+</div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<div class="tsd-tag-example">
+<h4 class="tsd-anchor-link" id="example-3">Example<a href="#example-3" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h4><pre><code class="typescript"><span class="hl-4">inttegro</span><span class="hl-1">.</span><span class="hl-0">updateConfig</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-4">timeout:</span><span class="hl-1"> </span><span class="hl-7">60000</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-4">debug:</span><span class="hl-1"> </span><span class="hl-3">true</span><span class="hl-1">,</span><br/><span class="hl-1">});</span>
+</code><button type="button">Copy</button></pre>
+
+</div></div><aside class="tsd-sources">
+<ul>
+<li>Defined in <a href="https://github.com/inttegro/inttegro-sdk-typescript/blob/c6871527dbfe197be205906f3a98ce7b7b95eb36/src/client.ts#L149">src/client.ts:149</a></li></ul></aside></div></li></ul></section></section></details></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Constructors"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Constructors</summary>
+<div><a href="#constructor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Constructor"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a></div></details>
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
+<div><a href="#apps"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>apps</span></a><a href="#balances"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>balances</span></a><a href="#balancetransactions"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>balance<wbr/>Transactions</span></a><a href="#broadcasts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>broadcasts</span></a><a href="#chimes"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>chimes</span></a><a href="#customers"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>customers</span></a><a href="#filelinks"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>file<wbr/>Links</span></a><a href="#filereferences"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>file<wbr/>References</span></a><a href="#files"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>files</span></a><a href="#financialaccounts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>financial<wbr/>Accounts</span></a><a href="#keys"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>keys</span></a><a href="#messagetemplates"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>message<wbr/>Templates</span></a><a href="#orders"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>orders</span></a><a href="#otp"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>otp</span></a><a href="#paymentmethods"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>payment<wbr/>Methods</span></a><a href="#payouts"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>payouts</span></a><a href="#prices"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>prices</span></a><a href="#products"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>products</span></a><a href="#purchaseintents"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>purchase<wbr/>Intents</span></a><a href="#refunds"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>refunds</span></a><a href="#schedules"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>schedules</span></a><a href="#spec"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>spec</span></a><a href="#uploadrequests"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upload<wbr/>Requests</span></a></div></details>
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Methods"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Methods</summary>
+<div><a href="#addrequestinterceptor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Request<wbr/>Interceptor</span></a><a href="#addresponseinterceptor"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Response<wbr/>Interceptor</span></a><a href="#postwithresponse"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>post<wbr/>With<wbr/>Response</span></a><a href="#requestwithresponse"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>request<wbr/>With<wbr/>Response</span></a><a href="#updateconfig"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Method"><use href="../assets/icons.svg#icon-2048"></use></svg><span>update<wbr/>Config</span></a></div></details></div></details></div>
+<div class="site-menu">
+<nav id="tsd-sidebar-links" class="tsd-navigation"><a href="https://studio.inttegro.com/sdks" class="tsd-nav-link">Studio</a><a href="https://github.com/inttegro/inttegro-sdk-typescript" class="tsd-nav-link">GitHub</a></nav>
+<nav class="tsd-navigation"><a href="../modules.html">Inttegro TypeScript SDK - v11.0.0</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>
