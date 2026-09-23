@@ -101,6 +101,8 @@ export interface PayoutBalanceTransaction {
 
 export interface Payout {
   amount?: Amount;
+  /** The payout's own immutable debit; distinct from funding contributions. */
+  balanceTransactionId?: string;
   balanceTransactions?: PayoutBalanceTransaction[];
   canceledAt?: Date;
   customData?: CustomData;
