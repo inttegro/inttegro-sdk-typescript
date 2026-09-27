@@ -66,17 +66,19 @@ export interface LookupCustomerRequest {
 export interface Customer {
   balance: CustomerBalance;
   billingAddress?: CustomerAddress | null;
+  createdAt: Date;
+  customData?: CustomData;
+  emailAddress?: string | null;
+  /** App-scoped value for spotting possible duplicate customer records. */
+  fingerprint: string;
+  guest: boolean;
   id: string;
   name: string;
-  title?: string | null;
-  suffix?: string | null;
-  reference?: string | null;
-  emailAddress?: string | null;
   phoneNumber?: string | null;
-  customData?: CustomData;
-  createdAt: Date;
-  guest: boolean;
+  reference?: string | null;
   shippingAddress?: CustomerAddress | null;
+  suffix?: string | null;
+  title?: string | null;
   updatedAt?: Date | null;
 }
 

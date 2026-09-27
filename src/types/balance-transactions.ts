@@ -16,7 +16,11 @@ export interface PayoutConfiguration {
   };
 }
 
-export const BalanceTransactionTypes = { Payment: 'payment', Refund: 'refund' } as const;
+export const BalanceTransactionTypes = {
+  Payment: 'payment',
+  Refund: 'refund',
+  Payout: 'payout',
+} as const;
 export type BalanceTransactionType =
   (typeof BalanceTransactionTypes)[keyof typeof BalanceTransactionTypes];
 
@@ -60,9 +64,6 @@ export type BalanceTransactionAllocation =
 interface BalanceTransactionBase {
   id: string;
   type: BalanceTransactionType;
-  /** @deprecated Inspect allocations because one payment transaction can fund many payouts. */
-  payoutId?: string;
-  orderId: string;
   amount: Amount;
   createdAt: Date;
   availableAt?: Date;
@@ -75,8 +76,11 @@ interface BalanceTransactionBase {
 
 export interface PaymentBalanceTransaction extends BalanceTransactionBase {
   type: 'payment';
+  orderId: string;
   paymentId: string;
   refundId?: never;
+  /** @deprecated Inspect allocations because one payment transaction can fund many payouts. */
+  payoutId?: string;
   allocations?: BalanceTransactionAllocation[];
   availableAmount?: Amount;
   pendingAmount?: Amount;
@@ -85,15 +89,32 @@ export interface PaymentBalanceTransaction extends BalanceTransactionBase {
 
 export interface RefundBalanceTransaction extends BalanceTransactionBase {
   type: 'refund';
+  orderId: string;
   refundId: string;
   paymentId?: never;
+  payoutId?: never;
   allocations?: never;
   availableAmount?: never;
   pendingAmount?: never;
   spentAmount?: never;
 }
 
-export type BalanceTransaction = PaymentBalanceTransaction | RefundBalanceTransaction;
+export interface PayoutDebitBalanceTransaction extends BalanceTransactionBase {
+  type: 'payout';
+  payoutId: string;
+  orderId?: never;
+  paymentId?: never;
+  refundId?: never;
+  allocations?: never;
+  availableAmount?: never;
+  pendingAmount?: never;
+  spentAmount?: never;
+}
+
+export type BalanceTransaction =
+  | PaymentBalanceTransaction
+  | RefundBalanceTransaction
+  | PayoutDebitBalanceTransaction;
 
 export interface BalanceTransactionPage {
   number: number;
