@@ -99,9 +99,7 @@ describe('domain constants', () => {
         suggestedAmounts: [{ id: 'supporter', value: 1000, recommended: true }],
       },
     };
-    expect(customerSelected.customerSelectedAmount.suggestedAmounts?.[0]?.id).toBe(
-      'supporter',
-    );
+    expect(customerSelected.customerSelectedAmount.suggestedAmounts?.[0]?.id).toBe('supporter');
   });
 
   it('uses request-specific file-link access and payment-method owner patches', () => {
