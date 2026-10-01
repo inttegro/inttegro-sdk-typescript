@@ -37,7 +37,8 @@ describe('Products', () => {
     await products.archive({ productId: 'prod_123' });
     await products.addPrice({
       productId: 'prod_123',
-      amount: { currency: 'ghs', value: 5000 },
+      type: 'fixed_amount',
+      fixedAmount: { currency: 'ghs', value: 5000 },
     });
     await products.setDefaultUnitPrice({ productId: 'prod_123', priceId: 'pr_123' });
     await products.page({ pageNumber: 1, pageSize: 20 });
@@ -52,7 +53,8 @@ describe('Products', () => {
     expect(postSpy).toHaveBeenCalledWith('/products/archive', { productId: 'prod_123' });
     expect(postSpy).toHaveBeenCalledWith('/products/add_price', {
       productId: 'prod_123',
-      amount: { currency: 'ghs', value: 5000 },
+      type: 'fixed_amount',
+      fixedAmount: { currency: 'ghs', value: 5000 },
     });
     expect(postSpy).toHaveBeenCalledWith('/products/set_default_unit_price', {
       productId: 'prod_123',

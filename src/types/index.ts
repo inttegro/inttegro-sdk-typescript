@@ -31,6 +31,8 @@ export type {
   ProductLineItemParams,
   CatalogProductWithPriceDataParams,
   CatalogProductWithPriceReferenceParams,
+  CustomerSelectedPriceParams,
+  CatalogProductWithCustomerSelectedPriceParams,
   ProductDetailsParams,
   ProductLineItem as OrderLineItemProduct,
   FeeLineItemParams,

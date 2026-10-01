@@ -1,5 +1,5 @@
 import type { CustomData } from './custom-data';
-import type { Amount } from './money';
+import type { Amount, AmountParams } from './money';
 import type { Price, PriceParams } from './prices';
 import type { ProductType } from './products';
 import type { RequestMeta } from './requests';
@@ -47,6 +47,7 @@ export interface ProductLineItemParams {
   productId?: never;
   /** Catalog price IDs are not valid on an inline product snapshot. */
   priceId?: never;
+  customerSelectedPrice?: never;
   /** Internal product ID for reconciliation */
   id?: string;
   /** Product type */
@@ -76,6 +77,7 @@ export interface CatalogProductWithPriceDataParams {
   /** Explicit price for this transaction. */
   price: PriceParams;
   priceId?: never;
+  customerSelectedPrice?: never;
   id?: never;
   type?: never;
   about?: never;
@@ -94,6 +96,29 @@ export interface CatalogProductWithPriceReferenceParams {
   /** How many units of the catalog product the customer is purchasing. */
   quantity: number;
   price?: never;
+  customerSelectedPrice?: never;
+  id?: never;
+  type?: never;
+  about?: never;
+  reference?: never;
+  name?: never;
+  taxCode?: never;
+  customData?: never;
+}
+
+/** Couples a saved price policy with the concrete unit amount chosen for an order. */
+export interface CustomerSelectedPriceParams {
+  priceId: string;
+  selectedAmount: AmountParams;
+}
+
+/** Catalog product using an amount selected under a saved price's range. */
+export interface CatalogProductWithCustomerSelectedPriceParams {
+  productId: string;
+  customerSelectedPrice: CustomerSelectedPriceParams;
+  quantity: number;
+  price?: never;
+  priceId?: never;
   id?: never;
   type?: never;
   about?: never;
@@ -106,7 +131,8 @@ export interface CatalogProductWithPriceReferenceParams {
 export type ProductDetailsParams =
   | ProductLineItemParams
   | CatalogProductWithPriceDataParams
-  | CatalogProductWithPriceReferenceParams;
+  | CatalogProductWithPriceReferenceParams
+  | CatalogProductWithCustomerSelectedPriceParams;
 
 /**
  * Fee line item

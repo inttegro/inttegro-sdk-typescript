@@ -34,7 +34,6 @@ export class Products {
   async addPrice(request: AddProductPriceRequest): Promise<ProductDefaultUnitPrice> {
     const errors = validateRequired(request as unknown as Record<string, unknown>, [
       'product_id',
-      'amount',
     ]);
     throwIfValidationErrors(errors);
 
