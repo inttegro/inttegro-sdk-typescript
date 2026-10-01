@@ -18,9 +18,6 @@ export class Prices {
   constructor(private httpClient: HttpClient) {}
 
   async create(request: CatalogPriceParams): Promise<CatalogPrice> {
-    const errors = validateRequired(request as unknown as Record<string, unknown>, ['amount']);
-    throwIfValidationErrors(errors);
-
     return this.httpClient.postResource<CatalogPrice>('/prices/create', 'price', request);
   }
 

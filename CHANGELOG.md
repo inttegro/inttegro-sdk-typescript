@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.2.0] - 2026-10-01
+
+- Added typed fixed and customer-selected catalog price definitions, suggested
+  contribution amounts, and order line items that couple a catalog price with
+  the amount selected by the customer.
+
 ## [11.1.0] - 2026-09-27
 
 - Added the required application-scoped customer fingerprint to typed customer

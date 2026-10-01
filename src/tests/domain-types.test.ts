@@ -12,6 +12,7 @@ import {
   wallets,
 } from '../index';
 import type {
+  AddProductPriceRequest,
   CatalogPrice,
   CatalogPriceParams,
   FileLinkCreateRequest,
@@ -51,19 +52,54 @@ describe('domain constants', () => {
 
   it('keeps inline prices flat and catalog price amounts nested', () => {
     const price: PriceParams = { currency: Currencies.GHS, value: 3005 };
-    const catalogPrice: CatalogPriceParams = { amount: price, label: 'Retail' };
+    const catalogPrice: CatalogPriceParams = {
+      type: 'fixed_amount',
+      fixedAmount: price,
+      label: 'Retail',
+    };
+    // @ts-expect-error legacy amount-only catalog prices are no longer accepted
+    const legacyCatalogPrice: CatalogPriceParams = { amount: price };
 
     expect(JSON.stringify(price)).toBe('{"currency":"ghs","value":3005}');
-    expect(catalogPrice).toEqual({ amount: price, label: 'Retail' });
+    expect(catalogPrice).toEqual({
+      type: 'fixed_amount',
+      fixedAmount: price,
+      label: 'Retail',
+    });
+    expect(legacyCatalogPrice).toEqual({ amount: price });
+
+    const productPrice: AddProductPriceRequest = {
+      productId: 'prod_123',
+      type: 'fixed_amount',
+      fixedAmount: price,
+    };
+    expect(productPrice).toEqual({
+      productId: 'prod_123',
+      type: 'fixed_amount',
+      fixedAmount: price,
+    });
 
     const returned: CatalogPrice = {
       id: 'pr_123',
       active: true,
+      type: 'fixed_amount',
+      fixedAmount: price,
       nominal: price,
       productId: 'prod_123',
       createdAt: '2026-09-02T12:00:00Z',
     };
     expect(returned.productId).toBe('prod_123');
+
+    const customerSelected: CatalogPriceParams = {
+      type: 'customer_selected_amount',
+      productId: 'prod_123',
+      customerSelectedAmount: {
+        currency: Currencies.GHS,
+        minimum: 500,
+        suggestedAmounts: [{ id: 'supporter', value: 1000, recommended: true }],
+      },
+    };
+    expect(customerSelected.customerSelectedAmount.suggestedAmounts?.[0]?.id).toBe('supporter');
   });
 
   it('uses request-specific file-link access and payment-method owner patches', () => {

@@ -1,5 +1,6 @@
 import type { CustomData } from './custom-data';
-import type { Amount, AmountParams } from './money';
+import type { Amount } from './money';
+import type { CatalogPriceDefinitionParams, CustomerSelectedAmount } from './prices';
 
 export const ProductTypes = {
   Physical: 'physical',
@@ -29,24 +30,56 @@ export const ProductShipmentInputTypes = {
 export type ProductShipmentInputType =
   (typeof ProductShipmentInputTypes)[keyof typeof ProductShipmentInputTypes];
 
-export interface ProductDefaultUnitPrice {
+interface ProductDefaultUnitPriceBase {
   id: string;
   active: boolean;
   productId?: string | null;
   label?: string | null;
   about?: string | null;
-  nominal: Amount;
   createdAt: Date;
   updatedAt?: Date | null;
   archivedAt?: Date | null;
 }
 
-export interface ProductPriceSummary {
+export type ProductDefaultUnitPrice = ProductDefaultUnitPriceBase &
+  (
+    | {
+        type: 'fixed_amount';
+        fixedAmount: Amount;
+        /** Deprecated compatibility alias for fixedAmount. */
+        nominal: Amount;
+        customerSelectedAmount?: never;
+      }
+    | {
+        type: 'customer_selected_amount';
+        customerSelectedAmount: CustomerSelectedAmount;
+        fixedAmount?: never;
+        nominal?: never;
+      }
+  );
+
+interface ProductPriceSummaryBase {
   id: string;
   active: boolean;
   label?: string | null;
-  nominal: Amount;
 }
+
+export type ProductPriceSummary = ProductPriceSummaryBase &
+  (
+    | {
+        type: 'fixed_amount';
+        fixedAmount: Amount;
+        /** Deprecated compatibility alias for fixedAmount. */
+        nominal: Amount;
+        customerSelectedAmount?: never;
+      }
+    | {
+        type: 'customer_selected_amount';
+        customerSelectedAmount: CustomerSelectedAmount;
+        fixedAmount?: never;
+        nominal?: never;
+      }
+  );
 
 export interface ProductPhysicalDimensions {
   weightUnit?: string;
@@ -158,12 +191,11 @@ export interface ProductActionRequest {
   productId: string;
 }
 
-export interface AddProductPriceRequest {
+export type AddProductPriceRequest = CatalogPriceDefinitionParams & {
   productId: string;
-  amount: AmountParams;
   label?: string;
   about?: string;
-}
+};
 
 export interface SetDefaultUnitPriceRequest {
   productId: string;
