@@ -5,8 +5,7 @@
 [![CI](https://github.com/inttegro/inttegro-sdk-typescript/actions/workflows/ci.yml/badge.svg)](https://github.com/inttegro/inttegro-sdk-typescript/actions/workflows/ci.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/inttegro/inttegro-sdk-typescript/badge)](https://scorecard.dev/viewer/?uri=github.com/inttegro/inttegro-sdk-typescript)
 
-Accept GHS payments, present Ghana Mobile Money checkout, and manage orders,
-refunds, and payouts with Inttegro's typed server-side TypeScript SDK.
+The official TypeScript client for building server-side Inttegro integrations.
 
 [Try the live Next.js checkout](https://nextjs-demo.inttegro.dev) ·
 [Browse every live demo](https://demos.inttegro.dev) ·
@@ -15,12 +14,12 @@ refunds, and payouts with Inttegro's typed server-side TypeScript SDK.
 
 Use it when your trusted Node.js, Bun, or Deno service needs to:
 
-- create a GHS order and hand the customer a hosted Checkout URL;
-- collect Ghana Mobile Money through Inttegro's payment flow;
-- manage typed customers, products, prices, payments, refunds, and payouts; and
+- create and manage checkout, orders, and purchase intents;
+- work with payments, payment methods, refunds, and payouts;
+- manage customers, products, prices, files, and other Inttegro resources; and
 - keep retries, idempotency, errors, telemetry, and API evolution explicit.
 
-If this SDK helps your integration, [star the repository](https://github.com/inttegro/inttegro-sdk-typescript) so other Ghanaian developers can find it.
+If this SDK helps your integration, [star the repository](https://github.com/inttegro/inttegro-sdk-typescript) so other developers can find it.
 
 ## See it working
 
@@ -159,7 +158,7 @@ The GitHub release for each version is the canonical record. It contains the exa
 
 ```bash
 sha256sum --check SHA256SUMS
-gh attestation verify inttegro-inttegro-sdk-11.2.2.tgz \
+gh attestation verify inttegro-inttegro-sdk-11.2.3.tgz \
   --repo inttegro/inttegro-sdk-typescript
 ```
 

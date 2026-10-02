@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.2.3] - 2026-10-02
+
+- Restored the broad Inttegro API description while retaining searchable
+  metadata and live integration examples.
+
 ## [11.2.2] - 2026-10-02
 
 - Corrected the live demo source links to follow the demos repository's

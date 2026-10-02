@@ -1,7 +1,7 @@
 {
   "name": "@inttegro/inttegro-sdk",
-  "version": "11.2.2",
-  "description": "Typed TypeScript SDK for Inttegro GHS checkout and Ghana Mobile Money payments",
+  "version": "11.2.3",
+  "description": "Official TypeScript SDK for the Inttegro API",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
