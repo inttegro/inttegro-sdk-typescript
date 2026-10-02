@@ -28,12 +28,12 @@ These production-shaped applications use this SDK against the same public API:
 
 | Stack | Live checkout | Source |
 | --- | --- | --- |
-| Next.js | [Open Kora Market](https://nextjs-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/nextjs) |
-| Express | [Open Afterglow Sessions](https://express-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/express) |
-| Nuxt | [Open Kora Market](https://nuxt-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/nuxt) |
-| NestJS | [Open Openfield](https://nestjs-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/nestjs) |
-| RedwoodSDK | [Open Openfield](https://redwoodsdk-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/redwoodsdk) |
-| Astro | [Open Openfield](https://astro-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/astro) |
+| Next.js | [Open Kora Market](https://nextjs-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/main/nextjs) |
+| Express | [Open Afterglow Sessions](https://express-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/main/express) |
+| Nuxt | [Open Kora Market](https://nuxt-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/main/nuxt) |
+| NestJS | [Open Openfield](https://nestjs-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/main/nestjs) |
+| RedwoodSDK | [Open Openfield](https://redwoodsdk-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/main/redwoodsdk) |
+| Astro | [Open Openfield](https://astro-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/main/astro) |
 
 ## Install
 
@@ -159,7 +159,7 @@ The GitHub release for each version is the canonical record. It contains the exa
 
 ```bash
 sha256sum --check SHA256SUMS
-gh attestation verify inttegro-inttegro-sdk-11.2.1.tgz \
+gh attestation verify inttegro-inttegro-sdk-11.2.2.tgz \
   --repo inttegro/inttegro-sdk-typescript
 ```
 
