@@ -1,14 +1,39 @@
 # Inttegro TypeScript SDK
 
+[![npm](https://img.shields.io/npm/v/%40inttegro%2Finttegro-sdk?label=npm&logo=npm)](https://www.npmjs.com/package/@inttegro/inttegro-sdk)
+[![weekly downloads](https://img.shields.io/npm/dw/%40inttegro%2Finttegro-sdk?label=downloads&logo=npm)](https://www.npmjs.com/package/@inttegro/inttegro-sdk)
+[![CI](https://github.com/inttegro/inttegro-sdk-typescript/actions/workflows/ci.yml/badge.svg)](https://github.com/inttegro/inttegro-sdk-typescript/actions/workflows/ci.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/inttegro/inttegro-sdk-typescript/badge)](https://scorecard.dev/viewer/?uri=github.com/inttegro/inttegro-sdk-typescript)
 
-The official TypeScript client for building server-side Inttegro integrations.
+Accept GHS payments, present Ghana Mobile Money checkout, and manage orders,
+refunds, and payouts with Inttegro's typed server-side TypeScript SDK.
 
-[API documentation](https://typescript.inttegro.dev/) · [Integration guides](https://studio.inttegro.com/sdks/typescript)
+[Try the live Next.js checkout](https://nextjs-demo.inttegro.dev) ·
+[Browse every live demo](https://demos.inttegro.dev) ·
+[Read the integration guide](https://studio.inttegro.com/sdks/typescript) ·
+[Open the API documentation](https://typescript.inttegro.dev/)
 
-> **Fastest, most modern path:** connect an agent to [Inttegro MCP](https://studio.inttegro.com/inttegro-mcp) at `https://mcp.inttegro.com`, then ask it to run `design_integration`. It will produce an implementation and test plan for your application. Use this SDK when you are ready to connect that plan to your TypeScript runtime.
+Use it when your trusted Node.js, Bun, or Deno service needs to:
 
-All official Inttegro SDKs expose the same API capabilities. This package adds TypeScript-specific types, tooling, and runtime controls.
+- create a GHS order and hand the customer a hosted Checkout URL;
+- collect Ghana Mobile Money through Inttegro's payment flow;
+- manage typed customers, products, prices, payments, refunds, and payouts; and
+- keep retries, idempotency, errors, telemetry, and API evolution explicit.
+
+If this SDK helps your integration, [star the repository](https://github.com/inttegro/inttegro-sdk-typescript) so other Ghanaian developers can find it.
+
+## See it working
+
+These production-shaped applications use this SDK against the same public API:
+
+| Stack | Live checkout | Source |
+| --- | --- | --- |
+| Next.js | [Open Kora Market](https://nextjs-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/nextjs) |
+| Express | [Open Afterglow Sessions](https://express-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/express) |
+| Nuxt | [Open Kora Market](https://nuxt-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/nuxt) |
+| NestJS | [Open Openfield](https://nestjs-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/nestjs) |
+| RedwoodSDK | [Open Openfield](https://redwoodsdk-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/redwoodsdk) |
+| Astro | [Open Openfield](https://astro-demo.inttegro.dev) | [View the integration](https://github.com/inttegro/inttegro-demos/tree/master/astro) |
 
 ## Install
 
@@ -76,6 +101,13 @@ try {
 
 Amounts use integer minor units: `5000` GHS is GHS 50.00. Reuse the same idempotency key when retrying the same logical write. If you omit one, the SDK generates a UUIDv7 key for mutating calls.
 
+## Prefer agent-assisted integration?
+
+Connect an agent to [Inttegro MCP](https://studio.inttegro.com/inttegro-mcp) at
+`https://mcp.inttegro.com`, then ask it to run `design_integration`. It returns
+an implementation and test plan for your application before you connect the
+plan to this SDK.
+
 ## Observe SDK operations
 
 The SDK emits vendor-neutral OpenTelemetry spans through your application's provider. It never configures an exporter or sends telemetry by itself. Configure OpenTelemetry at application startup; the global provider is used automatically, or you can pass a provider explicitly:
@@ -127,7 +159,7 @@ The GitHub release for each version is the canonical record. It contains the exa
 
 ```bash
 sha256sum --check SHA256SUMS
-gh attestation verify inttegro-inttegro-sdk-8.1.0.tgz \
+gh attestation verify inttegro-inttegro-sdk-11.2.1.tgz \
   --repo inttegro/inttegro-sdk-typescript
 ```
 
