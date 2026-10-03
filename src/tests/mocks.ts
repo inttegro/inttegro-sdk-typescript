@@ -151,6 +151,7 @@ export const mockFinancialAccountResponse = {
     type: 'wallet',
     reference: 'REF-2024-001',
     currency: 'ghs',
+    fingerprint: 'ifp_v1_app_wallet',
   },
 } satisfies { account: FinancialAccount };
 

@@ -83,8 +83,8 @@ export interface FinancialAccount {
   reference?: string;
   currency?: string;
   description?: string;
-  /** App-scoped value for recognizing duplicate financial-account connections. */
-  fingerprint?: string;
+  /** Stable identifier for recognizing the same underlying account within this application. */
+  fingerprint: string;
   pullConfiguration?: PullPushConfig;
   pushConfiguration?: PullPushConfig;
   wallet?: WalletConfig;
