@@ -65,10 +65,33 @@ export interface PurchaseIntentUsageOrder {
   id: string;
 }
 
+export interface PurchaseIntentBuyPageText {
+  checkoutSectionTitle?: string;
+  amountFieldLabel?: string;
+  primaryActionLabel?: string;
+}
+
+export interface PurchaseIntentPresentation {
+  buyPage?: {
+    text?: PurchaseIntentBuyPageText;
+  };
+}
+
+export interface PurchaseIntentPresentationUpdate {
+  buyPage: {
+    text: {
+      checkoutSectionTitle?: string | null;
+      amountFieldLabel?: string | null;
+      primaryActionLabel?: string | null;
+    };
+  };
+}
+
 interface CreatePurchaseIntentBase {
   quantity: PurchaseIntentQuantity;
   usage?: PurchaseIntentUsage;
   expiresAt?: Date;
+  presentation?: PurchaseIntentPresentation;
 }
 
 type PurchaseIntentProductSelection =
@@ -100,6 +123,7 @@ export interface UpdatePurchaseIntentRequest {
   quantity?: PurchaseIntentQuantity;
   expiresAt?: Date | null;
   reactivate?: boolean;
+  presentation?: PurchaseIntentPresentationUpdate;
 }
 
 export interface CancelPurchaseIntentRequest {
@@ -179,6 +203,7 @@ export interface PurchaseIntent {
   inactiveAt?: Date;
   merchant?: PurchaseIntentMerchant;
   price?: PurchaseIntentPrice;
+  presentation?: PurchaseIntentPresentation;
   product?: PurchaseIntentProduct;
   quantity: PurchaseIntentQuantity;
   status: PurchaseIntentStatus;

@@ -1,6 +1,6 @@
 {
   "name": "@inttegro/inttegro-sdk",
-  "version": "11.2.3",
+  "version": "11.3.0",
   "description": "Official TypeScript SDK for the Inttegro API",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
