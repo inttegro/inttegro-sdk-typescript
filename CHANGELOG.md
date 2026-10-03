@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [11.3.0] - 2026-10-03
+
+- Added typed hosted Buy-page text overrides to Purchase Intent create,
+  update, and response models, including explicit default restoration.
+- Added the application-scoped financial-account fingerprint to typed
+  responses.
+
 ## [11.2.3] - 2026-10-02
 
 - Restored the broad Inttegro API description while retaining searchable
