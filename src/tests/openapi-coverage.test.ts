@@ -11,6 +11,7 @@ const EXTERNALLY_SUPPLIED_CAPABILITY_URL_PATHS = new Set([
 ]);
 const CLIENT_CHECKOUT_PATHS = new Set([
   '/checkout/lookup',
+  '/checkout/select_amount',
   '/checkout/pay',
   '/checkout/request_confirmation',
   '/checkout/confirm_payment',
