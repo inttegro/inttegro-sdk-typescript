@@ -7,10 +7,18 @@ export const PayoutStatuses = {
   Processing: 'processing',
   Executing: 'executing',
   Succeeded: 'succeeded',
-  Invalid: 'invalid',
+  Failed: 'failed',
   Canceled: 'canceled',
 } as const;
 export type PayoutStatus = (typeof PayoutStatuses)[keyof typeof PayoutStatuses];
+
+export const PayoutFailureReasons = {
+  ProviderDeclined: 'provider_declined',
+  DeliveryFailed: 'delivery_failed',
+  TemporarilyUnavailable: 'temporarily_unavailable',
+  Unknown: 'unknown',
+} as const;
+export type PayoutFailureReason = (typeof PayoutFailureReasons)[keyof typeof PayoutFailureReasons];
 
 export interface PayoutSettingsLookupScheduleAgingSpec {
   abide: string;
@@ -89,6 +97,12 @@ export interface PayoutError {
   type: string;
 }
 
+export interface PayoutFailure {
+  detail: string;
+  reason: PayoutFailureReason;
+  retryable: boolean;
+}
+
 /** A sparse view of one balance transaction's contribution to a payout. */
 export interface PayoutBalanceTransaction {
   /** The exact portion allocated to this payout. */
@@ -107,11 +121,13 @@ export interface Payout {
   canceledAt?: Date;
   customData?: CustomData;
   destinationId: string;
+  /** @deprecated Use failure for stable, caller-safe failure information. */
   error?: PayoutError;
   executeAfter: Date;
   executedBy?: string;
   expectedAt?: Date;
   failedAt?: Date;
+  failure?: PayoutFailure;
   id: string;
   initiatedAt: Date;
   initiatedBy?: string;
