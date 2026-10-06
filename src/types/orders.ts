@@ -538,7 +538,6 @@ export interface Invoice {
   format: {
     web: InvoiceFormatDetails;
     pdf: InvoiceFormatDetails;
-    receipt?: InvoiceFormatDetails;
   };
 }
 
