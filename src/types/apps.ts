@@ -34,17 +34,15 @@ export interface CreateAppRequest {
 export interface AppRelationship {
   id: string;
   kind: AppRelationshipKind;
-  policyVersion: string;
+  parent: AppRelationshipParent;
   status: AppRelationshipStatus;
-  actorAppId: string;
-  creatorAppId: string;
-  placementParentAppId: string;
-  subjectAppId: string;
-  childAppId: string;
-  childStanding: string;
-  relationshipPolicy: Required<AppRelationshipPolicy>;
-  retainedCreatorAuthorityExists: boolean;
   createdAt: Date;
+}
+
+export interface AppRelationshipParent {
+  id: string;
+  name: string;
+  alias?: string;
 }
 
 export interface App {
@@ -55,6 +53,7 @@ export interface App {
   createdAt: Date;
   updatedAt?: Date;
   archivedAt?: Date;
+  capabilities: Record<string, unknown>;
   secretKey?: {
     id: string;
     tokenType: string;
