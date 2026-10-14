@@ -6,6 +6,7 @@ import type {
   PayoutBalanceTransaction,
   PayoutDestinations,
   PayoutError,
+  PayoutSettingsLimits,
   PayoutSettingsMutation,
 } from '../types/payouts';
 
@@ -80,5 +81,6 @@ describe('Payouts', () => {
     expectTypeOf<PayoutSettingsMutation['destinations']>().toEqualTypeOf<
       PayoutDestinations | undefined
     >();
+    expectTypeOf<PayoutSettingsMutation['limits']>().toEqualTypeOf<PayoutSettingsLimits>();
   });
 });
