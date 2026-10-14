@@ -58,8 +58,7 @@ export interface BalanceTransactionPayoutAllocation extends BalanceTransactionAl
 }
 
 export type BalanceTransactionAllocation =
-  | BalanceTransactionRefundAllocation
-  | BalanceTransactionPayoutAllocation;
+  BalanceTransactionRefundAllocation | BalanceTransactionPayoutAllocation;
 
 interface BalanceTransactionBase {
   id: string;
@@ -112,9 +111,7 @@ export interface PayoutDebitBalanceTransaction extends BalanceTransactionBase {
 }
 
 export type BalanceTransaction =
-  | PaymentBalanceTransaction
-  | RefundBalanceTransaction
-  | PayoutDebitBalanceTransaction;
+  PaymentBalanceTransaction | RefundBalanceTransaction | PayoutDebitBalanceTransaction;
 
 export interface BalanceTransactionPage {
   number: number;

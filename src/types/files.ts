@@ -297,8 +297,7 @@ export interface UploadRequestReviewByOrdinalRequest extends UploadRequestReview
 }
 
 export type UploadRequestReviewRequest =
-  | UploadRequestReviewByIdRequest
-  | UploadRequestReviewByOrdinalRequest;
+  UploadRequestReviewByIdRequest | UploadRequestReviewByOrdinalRequest;
 
 export interface UploadRequestFulfillRequest {
   file: string | Blob;
