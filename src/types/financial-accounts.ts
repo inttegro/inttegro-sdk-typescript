@@ -72,9 +72,7 @@ export interface FinancialAccountDoshRequest extends FinancialAccountRequestBase
 }
 
 export type CreateFinancialAccountRequest =
-  | FinancialAccountWalletRequest
-  | FinancialAccountBankRequest
-  | FinancialAccountDoshRequest;
+  FinancialAccountWalletRequest | FinancialAccountBankRequest | FinancialAccountDoshRequest;
 
 export interface FinancialAccount {
   id?: string;

@@ -6,12 +6,7 @@ export type CustomData = Readonly<Record<string, string>>;
 
 /** One JSON-compatible value. */
 export type JSONValue =
-  | string
-  | number
-  | boolean
-  | null
-  | readonly JSONValue[]
-  | Readonly<{ [key: string]: JSONValue }>;
+  string | number | boolean | null | readonly JSONValue[] | Readonly<{ [key: string]: JSONValue }>;
 
 /** Input data whose values the API normalizes to strings. */
 export type CustomDataInput = Readonly<Record<string, JSONValue>>;
