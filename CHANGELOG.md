@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [13.0.0] - 2026-10-14
+
+- **Breaking:** replaced the legacy flat payout minimum with typed
+  `limits.amount.min` and `limits.amount.max` values.
+- **Breaking:** reshaped application placement relationships around a typed
+  parent identity.
+- Added typed payment and payout capability lookup for the authenticated app.
+- Added payment receipt data separately from invoice data.
+
 ## [12.0.0] - 2026-10-05
 
 - **Breaking:** replaced the payout status `invalid` with `failed`.
