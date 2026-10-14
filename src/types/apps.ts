@@ -63,6 +63,45 @@ export interface App {
   relationship?: AppRelationship;
 }
 
+export const AppCapabilityStatuses = {
+  Enabled: 'enabled',
+  Restricted: 'restricted',
+  PendingReview: 'pending_review',
+} as const;
+export type AppCapabilityStatus =
+  (typeof AppCapabilityStatuses)[keyof typeof AppCapabilityStatuses];
+
+export const AppCapabilityStatusReasons = {
+  SetupIncomplete: 'setup_incomplete',
+  AccountUnderReview: 'account_under_review',
+  AccountRestricted: 'account_restricted',
+  AccountInactive: 'account_inactive',
+} as const;
+export type AppCapabilityStatusReason =
+  (typeof AppCapabilityStatusReasons)[keyof typeof AppCapabilityStatusReasons];
+
+export interface AppCapabilityRequirement {
+  code: string;
+  description: string;
+  dueAt: Date | null;
+}
+
+export interface AppCapabilityRequirements {
+  currentlyDue: AppCapabilityRequirement[];
+}
+
+export interface AppCapability {
+  status: AppCapabilityStatus;
+  statusChangedAt: Date;
+  statusReason?: AppCapabilityStatusReason;
+  requirements?: AppCapabilityRequirements;
+}
+
+export interface AppCapabilities {
+  payments: AppCapability;
+  payouts: AppCapability;
+}
+
 export interface UpdateAppRequest {
   name?: string;
   alias?: string;

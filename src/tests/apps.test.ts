@@ -12,16 +12,20 @@ describe('Apps', () => {
   });
 
   it('calls every apps endpoint', async () => {
-    const postSpy = vi
-      .spyOn(httpClient, 'post')
-      .mockResolvedValue({ app: { id: 'app_123' } } as never);
+    const postSpy = vi.spyOn(httpClient, 'post').mockImplementation(async (path) =>
+      (path === '/apps/capabilities'
+        ? { capabilities: { payments: {}, payouts: {} } }
+        : { app: { id: 'app_123' } }) as never,
+    );
 
     await apps.create({ name: 'My App' });
     await apps.lookup();
+    await apps.capabilities();
     await apps.update({ alias: 'my-app' });
 
     expect(postSpy).toHaveBeenCalledWith('/apps/create', { name: 'My App' });
     expect(postSpy).toHaveBeenCalledWith('/apps/lookup', {});
+    expect(postSpy).toHaveBeenCalledWith('/apps/capabilities', {});
     expect(postSpy).toHaveBeenCalledWith('/apps/update', { alias: 'my-app' });
   });
 });
