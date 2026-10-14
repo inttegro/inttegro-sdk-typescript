@@ -52,9 +52,19 @@ export interface PayoutSettingsMutationSchedule {
   type: string;
 }
 
+export interface PayoutAmountLimits {
+  min: Amount;
+  max: Amount;
+}
+
+export interface PayoutSettingsLimits {
+  amount: PayoutAmountLimits;
+}
+
 export interface PayoutSettingsLookup {
   destinations: PayoutDestinations;
   fxEnabled?: boolean;
+  limits: PayoutSettingsLimits;
   schedule?: PayoutSettingsLookupSchedule;
 }
 
@@ -62,6 +72,7 @@ export interface PayoutSettingsMutation {
   destinations?: PayoutDestinations;
   id?: string;
   fxEnabled?: boolean;
+  limits: PayoutSettingsLimits;
   schedule?: PayoutSettingsMutationSchedule;
 }
 

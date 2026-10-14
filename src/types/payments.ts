@@ -136,6 +136,16 @@ export interface PaymentError {
   code: string;
 }
 
+/** Receipt issued for a paid order payment. */
+export interface PaymentReceipt {
+  number?: string;
+  format: {
+    web: { url: string };
+    pdf: { url: string };
+  };
+  deliverySummary?: Record<string, unknown>;
+}
+
 /** A payment collected for an order. */
 export interface Payment {
   id: string;
@@ -144,6 +154,7 @@ export interface Payment {
   paymentMethod?: PaymentMethodSnapshot;
   billingDetails?: PaymentBillingDetails;
   customer?: PaymentCustomer;
+  receipt?: PaymentReceipt;
   latestAttempt?: PaymentAttempt;
   amount: Amount;
   nextAction?: PaymentNextAction | null;

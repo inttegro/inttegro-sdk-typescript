@@ -1,5 +1,5 @@
 import { HttpClient } from '../http-client';
-import { App, CreateAppRequest, UpdateAppRequest } from '../types';
+import { App, AppCapabilities, CreateAppRequest, UpdateAppRequest } from '../types';
 
 /** Application management endpoints. */
 export class Apps {
@@ -11,6 +11,10 @@ export class Apps {
 
   async lookup(): Promise<App> {
     return this.httpClient.postResource<App>('/apps/lookup', 'app', {});
+  }
+
+  async capabilities(): Promise<AppCapabilities> {
+    return this.httpClient.postResource<AppCapabilities>('/apps/capabilities', 'capabilities', {});
   }
 
   async update(request: UpdateAppRequest): Promise<App> {
