@@ -22,6 +22,7 @@ export type PayoutFailureReason = (typeof PayoutFailureReasons)[keyof typeof Pay
 
 export interface PayoutSettingsLookupScheduleAgingSpec {
   abide: string;
+  publicId: string;
   label: string;
   tPlus: string;
 }
@@ -37,7 +38,7 @@ export interface PayoutSettingsLookupSchedule {
 
 export interface PayoutSettingsMutationScheduleSpec {
   abide: string;
-  id: string;
+  publicId: string;
   label: string;
   tPlus: string;
 }
