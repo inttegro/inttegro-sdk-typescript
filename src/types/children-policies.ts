@@ -43,7 +43,6 @@ export interface ChildrenPolicyCapabilities {
 
 export interface ChildrenPolicy {
   id: string;
-  ownerApplicationId: string;
   version: number;
   activeVersion: number;
   name: string;
