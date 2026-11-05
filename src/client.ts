@@ -23,10 +23,12 @@ import { Broadcasts } from './resources/broadcasts';
 import { MessageTemplates } from './resources/message-templates';
 import { UploadRequests } from './resources/upload-requests';
 import { Apps } from './resources/apps';
+import { ChildrenPolicies } from './resources/children-policies';
 import { Keys } from './resources/keys';
 import { PurchaseIntents } from './resources/purchase-intents';
 import { FileReferences } from './resources/file-references';
 import { Refunds } from './resources/refunds';
+import { OperatingPolicies } from './resources/operating-policies';
 
 /**
  * Main Inttegro SDK client
@@ -75,6 +77,10 @@ export class InttegroClient {
   public readonly prices: Prices;
   /** Apps resource for managing the authenticated application */
   public readonly apps: Apps;
+  /** Gated children-policy lookup resource */
+  public readonly childrenPolicies: ChildrenPolicies;
+  /** Reusable operating-policy templates */
+  public readonly operatingPolicies: OperatingPolicies;
   /** Payment methods resource */
   public readonly paymentMethods: PaymentMethods;
   /** Payouts resource */
@@ -121,6 +127,8 @@ export class InttegroClient {
     this.products = new Products(this.httpClient);
     this.prices = new Prices(this.httpClient);
     this.apps = new Apps(this.httpClient);
+    this.childrenPolicies = new ChildrenPolicies(this.httpClient);
+    this.operatingPolicies = new OperatingPolicies(this.httpClient);
     this.paymentMethods = new PaymentMethods(this.httpClient);
     this.payouts = new Payouts(this.httpClient);
     this.balanceTransactions = new BalanceTransactions(this.httpClient);
