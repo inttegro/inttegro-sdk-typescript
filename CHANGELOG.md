@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [13.1.0] - 2026-11-05
+
+- Added typed private-beta children-policy lookup and operating-policy create,
+  lookup, and versioned update endpoints.
+- Added typed operating-policy selection to application create and update,
+  together with gated operating-policy projections on application responses.
+
 ## [13.0.0] - 2026-10-14
 
 - **Breaking:** replaced the legacy flat payout minimum with typed

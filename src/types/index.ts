@@ -108,6 +108,10 @@ export * from './spec';
 // Apps
 export * from './apps';
 
+// Children and operating policies
+export * from './children-policies';
+export * from './operating-policies';
+
 // Keys
 export * from './keys';
 

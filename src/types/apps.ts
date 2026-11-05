@@ -1,3 +1,5 @@
+import type { ApplicationOperatingPolicy, OperatingPolicySelection } from './operating-policies';
+
 export const AppManagementRoles = { Parent: 'parent', Child: 'child' } as const;
 export type AppManagementRole = (typeof AppManagementRoles)[keyof typeof AppManagementRoles];
 
@@ -28,6 +30,7 @@ export interface CreateAppRequest {
   description?: string;
   legalEntityType?: string;
   placementParentApplicationId?: string;
+  operatingPolicy?: OperatingPolicySelection;
   relationshipPolicy?: AppRelationshipPolicy;
 }
 
@@ -54,6 +57,7 @@ export interface App {
   updatedAt?: Date;
   archivedAt?: Date;
   capabilities: Record<string, unknown>;
+  operatingPolicy?: ApplicationOperatingPolicy;
   secretKey?: {
     id: string;
     tokenType: string;
@@ -107,4 +111,5 @@ export interface UpdateAppRequest {
   alias?: string;
   description?: string;
   legalEntityType?: string;
+  operatingPolicy?: OperatingPolicySelection;
 }

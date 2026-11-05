@@ -16,6 +16,8 @@ describe('InttegroClient', () => {
       expect(client).toBeDefined();
       expect(client.orders).toBeDefined();
       expect(client.apps).toBeDefined();
+      expect(client.childrenPolicies).toBeDefined();
+      expect(client.operatingPolicies).toBeDefined();
       expect(client.keys).toBeDefined();
       expect(client.purchaseIntents).toBeDefined();
       expect(client.fileReferences).toBeDefined();
