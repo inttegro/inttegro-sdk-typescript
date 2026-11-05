@@ -52,3 +52,24 @@ export interface ChildrenPolicy {
   updatedAt: Date;
   versionCreatedAt: Date;
 }
+
+/** Selects the latest children policy by default, or one exact immutable version. */
+export interface LookupChildrenPolicyRequest {
+  version?: number;
+}
+
+/** Controls pagination through the authenticated application's policy versions. */
+export interface PageChildrenPolicyVersionsRequest {
+  number?: number;
+  size?: number;
+}
+
+/** One page of immutable children-policy versions, ordered newest first. */
+export interface ChildrenPolicyVersionsPage {
+  number: number;
+  size: number;
+  count: number;
+  total: number;
+  hasMore: boolean;
+  versions: ChildrenPolicy[];
+}
