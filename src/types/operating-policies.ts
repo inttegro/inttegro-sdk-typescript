@@ -8,7 +8,7 @@ export interface OperatingPolicyLimits {
 }
 
 export interface OperatingPolicyBTAgingSpec {
-  publicId: string;
+  id: string;
   tPlus: string;
 }
 
@@ -101,6 +101,24 @@ export interface CreateOperatingPolicyRequest {
 
 export interface LookupOperatingPolicyRequest {
   operatingPolicyId: string;
+  version?: number;
+}
+
+/** Selects one operating policy and controls pagination through its versions. */
+export interface PageOperatingPolicyVersionsRequest {
+  operatingPolicyId: string;
+  number?: number;
+  size?: number;
+}
+
+/** One page of immutable operating-policy versions, ordered newest first. */
+export interface OperatingPolicyVersionsPage {
+  number: number;
+  size: number;
+  count: number;
+  total: number;
+  hasMore: boolean;
+  versions: OperatingPolicy[];
 }
 
 export interface UpdateOperatingPolicyRequest {

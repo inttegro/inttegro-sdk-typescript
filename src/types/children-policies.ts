@@ -8,7 +8,7 @@ export interface ChildrenPolicyLimits {
 }
 
 export interface ChildrenPolicyBTAgingSpec {
-  publicId: string;
+  id: string;
   tPlus: string;
 }
 
@@ -43,7 +43,6 @@ export interface ChildrenPolicyCapabilities {
 
 export interface ChildrenPolicy {
   id: string;
-  ownerApplicationId: string;
   version: number;
   activeVersion: number;
   name: string;
@@ -52,4 +51,25 @@ export interface ChildrenPolicy {
   createdAt: Date;
   updatedAt: Date;
   versionCreatedAt: Date;
+}
+
+/** Selects the latest children policy by default, or one exact immutable version. */
+export interface LookupChildrenPolicyRequest {
+  version?: number;
+}
+
+/** Controls pagination through the authenticated application's policy versions. */
+export interface PageChildrenPolicyVersionsRequest {
+  number?: number;
+  size?: number;
+}
+
+/** One page of immutable children-policy versions, ordered newest first. */
+export interface ChildrenPolicyVersionsPage {
+  number: number;
+  size: number;
+  count: number;
+  total: number;
+  hasMore: boolean;
+  versions: ChildrenPolicy[];
 }
