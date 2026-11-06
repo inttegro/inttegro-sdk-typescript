@@ -12,6 +12,14 @@ export const PayoutStatuses = {
 } as const;
 export type PayoutStatus = (typeof PayoutStatuses)[keyof typeof PayoutStatuses];
 
+export const PayoutBalanceTransactionStatuses = {
+  Reserved: 'reserved',
+  Completed: 'completed',
+  Released: 'released',
+} as const;
+export type PayoutBalanceTransactionStatus =
+  (typeof PayoutBalanceTransactionStatuses)[keyof typeof PayoutBalanceTransactionStatuses];
+
 export const PayoutFailureReasons = {
   ProviderDeclined: 'provider_declined',
   DeliveryFailed: 'delivery_failed',
@@ -123,6 +131,8 @@ export interface PayoutBalanceTransaction {
   amount: Amount;
   /** Unique balance transaction identifier. */
   id: string;
+  /** Whether this contribution remains reserved, completed, or released. */
+  status: PayoutBalanceTransactionStatus;
 }
 
 export interface Payout {

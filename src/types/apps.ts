@@ -1,3 +1,4 @@
+import type { ChildrenPolicy } from './children-policies';
 import type { ApplicationOperatingPolicy, OperatingPolicySelection } from './operating-policies';
 
 export const AppManagementRoles = { Parent: 'parent', Child: 'child' } as const;
@@ -57,6 +58,7 @@ export interface App {
   updatedAt?: Date;
   archivedAt?: Date;
   capabilities: Record<string, unknown>;
+  childrenPolicy?: ChildrenPolicy;
   operatingPolicy?: ApplicationOperatingPolicy;
   secretKey?: {
     id: string;

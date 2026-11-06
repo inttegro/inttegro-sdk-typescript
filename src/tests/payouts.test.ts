@@ -1,6 +1,7 @@
 import { describe, it, expect, expectTypeOf, vi, beforeEach } from 'vitest';
 import { Payouts } from '../resources/payouts';
 import { HttpClient } from '../http-client';
+import { PayoutBalanceTransactionStatuses } from '../types/payouts';
 import type {
   Payout,
   PayoutBalanceTransaction,
@@ -78,6 +79,10 @@ describe('Payouts', () => {
     expectTypeOf<Payout['balanceTransactions']>().toEqualTypeOf<
       PayoutBalanceTransaction[] | undefined
     >();
+    expectTypeOf<PayoutBalanceTransaction['status']>().toEqualTypeOf<
+      'reserved' | 'completed' | 'released'
+    >();
+    expect(PayoutBalanceTransactionStatuses.Reserved).toBe('reserved');
     expectTypeOf<PayoutSettingsMutation['destinations']>().toEqualTypeOf<
       PayoutDestinations | undefined
     >();

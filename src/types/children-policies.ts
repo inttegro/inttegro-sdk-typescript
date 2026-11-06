@@ -8,7 +8,7 @@ export interface ChildrenPolicyLimits {
 }
 
 export interface ChildrenPolicyBTAgingSpec {
-  publicId: string;
+  id: string;
   tPlus: string;
 }
 

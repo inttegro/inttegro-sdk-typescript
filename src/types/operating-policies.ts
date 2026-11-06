@@ -8,7 +8,7 @@ export interface OperatingPolicyLimits {
 }
 
 export interface OperatingPolicyBTAgingSpec {
-  publicId: string;
+  id: string;
   tPlus: string;
 }
 
