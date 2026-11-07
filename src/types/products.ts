@@ -46,15 +46,12 @@ export type ProductDefaultUnitPrice = ProductDefaultUnitPriceBase &
     | {
         type: 'fixed_amount';
         fixedAmount: Amount;
-        /** Deprecated compatibility alias for fixedAmount. */
-        nominal: Amount;
         customerSelectedAmount?: never;
       }
     | {
         type: 'customer_selected_amount';
         customerSelectedAmount: CustomerSelectedAmount;
         fixedAmount?: never;
-        nominal?: never;
       }
   );
 
@@ -69,15 +66,12 @@ export type ProductPriceSummary = ProductPriceSummaryBase &
     | {
         type: 'fixed_amount';
         fixedAmount: Amount;
-        /** Deprecated compatibility alias for fixedAmount. */
-        nominal: Amount;
         customerSelectedAmount?: never;
       }
     | {
         type: 'customer_selected_amount';
         customerSelectedAmount: CustomerSelectedAmount;
         fixedAmount?: never;
-        nominal?: never;
       }
   );
 

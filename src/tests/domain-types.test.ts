@@ -84,7 +84,6 @@ describe('domain constants', () => {
       active: true,
       type: 'fixed_amount',
       fixedAmount: price,
-      nominal: price,
       productId: 'prod_123',
       createdAt: '2026-09-02T12:00:00Z',
     };
