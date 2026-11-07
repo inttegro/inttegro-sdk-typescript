@@ -9,22 +9,30 @@ describe('HttpClient idempotency', () => {
     vi.unstubAllGlobals();
   });
 
-  it('adds request_meta.idempotency_key to mutating JSON POST bodies', async () => {
-    const calls: RequestInit[] = [];
+  it('rejects top-level idempotencyKey on mutating JSON POST bodies', async () => {
     vi.stubGlobal(
       'fetch',
-      vi.fn(async (_url: string, options: RequestInit) => {
-        calls.push(options);
-        return jsonResponse({ ok: true });
-      })
+      vi.fn(async () => jsonResponse({ ok: true }))
     );
 
     const client = new HttpClient({ apiKey: 'sk_test', baseUrl: 'https://api.inttegro.com' });
-    await client.post('/orders/create', { number: 'ORDER-1', idempotencyKey: 'legacy' });
+    await expect(
+      client.post('/orders/create', { number: 'ORDER-1', idempotencyKey: 'legacy' })
+    ).rejects.toThrow('Top-level idempotencyKey is not supported');
+    expect(fetch).not.toHaveBeenCalled();
+  });
 
-    const body = JSON.parse(calls[0].body as string);
-    expect(body.idempotency_key).toBeUndefined();
-    expect(body.request_meta.idempotency_key).toMatch(UUID_V7_REGEX);
+  it('rejects top-level idempotencyKey on read-style POST bodies', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => jsonResponse({ ok: true }))
+    );
+
+    const client = new HttpClient({ apiKey: 'sk_test', baseUrl: 'https://api.inttegro.com' });
+    await expect(
+      client.post('/orders/lookup', { orderId: 'or_123', idempotencyKey: 'legacy' })
+    ).rejects.toThrow('Top-level idempotencyKey is not supported');
+    expect(fetch).not.toHaveBeenCalled();
   });
 
   it('does not add idempotency metadata to read-style POST bodies', async () => {
@@ -38,7 +46,7 @@ describe('HttpClient idempotency', () => {
     );
 
     const client = new HttpClient({ apiKey: 'sk_test', baseUrl: 'https://api.inttegro.com' });
-    await client.post('/orders/lookup', { orderId: 'or_123', idempotencyKey: 'legacy' });
+    await client.post('/orders/lookup', { orderId: 'or_123' });
     await client.post('/orders/search', { text: 'tea' });
 
     for (const call of calls) {
