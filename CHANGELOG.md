@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [14.1.0] - 2026-11-07
+
+- Added typed response-projection metadata with resource-level `pick` and
+  `omit` selections.
+- Restricted idempotency keys to request metadata and the `Idempotency-Key`
+  header.
+
 ## [14.0.0] - 2026-11-06
 
 - **Breaking:** renamed the children-policy and operating-policy

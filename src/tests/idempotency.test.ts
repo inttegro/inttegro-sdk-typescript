@@ -20,10 +20,9 @@ describe('HttpClient idempotency', () => {
     );
 
     const client = new HttpClient({ apiKey: 'sk_test', baseUrl: 'https://api.inttegro.com' });
-    await client.post('/orders/create', { number: 'ORDER-1', idempotencyKey: 'legacy' });
+    await client.post('/orders/create', { number: 'ORDER-1' });
 
     const body = JSON.parse(calls[0].body as string);
-    expect(body.idempotency_key).toBeUndefined();
     expect(body.request_meta.idempotency_key).toMatch(UUID_V7_REGEX);
   });
 
@@ -38,12 +37,11 @@ describe('HttpClient idempotency', () => {
     );
 
     const client = new HttpClient({ apiKey: 'sk_test', baseUrl: 'https://api.inttegro.com' });
-    await client.post('/orders/lookup', { orderId: 'or_123', idempotencyKey: 'legacy' });
+    await client.post('/orders/lookup', { orderId: 'or_123' });
     await client.post('/orders/search', { text: 'tea' });
 
     for (const call of calls) {
       const body = JSON.parse(call.body as string);
-      expect(body.idempotency_key).toBeUndefined();
       expect(body.request_meta).toBeUndefined();
     }
   });

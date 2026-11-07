@@ -529,9 +529,6 @@ export class HttpClient {
 
     const headers = normalizeHeaders(options.headers);
     const requestOptions: RequestInit = { ...options, headers };
-    if (mode.body && typeof requestOptions.body === 'string') {
-      requestOptions.body = stripTopLevelIdempotencyKey(requestOptions.body);
-    }
     if (!isIdempotentMutationPath(path)) {
       return requestOptions;
     }
@@ -601,20 +598,6 @@ function retryErrorType(error: unknown): string {
   return 'unknown_error';
 }
 
-function stripTopLevelIdempotencyKey(body: string): string {
-  try {
-    const payload = JSON.parse(body) as unknown;
-    if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
-      return body;
-    }
-    const record = payload as Record<string, unknown>;
-    delete record.idempotency_key;
-    return JSON.stringify(record);
-  } catch {
-    return body;
-  }
-}
-
 function addRequestMetaIdempotencyKey(body: string): string {
   try {
     const payload = JSON.parse(body) as unknown;
@@ -622,7 +605,6 @@ function addRequestMetaIdempotencyKey(body: string): string {
       return body;
     }
     const record = payload as Record<string, unknown>;
-    delete record.idempotency_key;
     const requestMeta =
       record.request_meta &&
       typeof record.request_meta === 'object' &&
