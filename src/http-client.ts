@@ -529,9 +529,6 @@ export class HttpClient {
 
     const headers = normalizeHeaders(options.headers);
     const requestOptions: RequestInit = { ...options, headers };
-    if (mode.body && typeof requestOptions.body === 'string') {
-      requestOptions.body = rejectTopLevelIdempotencyKey(requestOptions.body);
-    }
     if (!isIdempotentMutationPath(path)) {
       return requestOptions;
     }
@@ -599,25 +596,6 @@ function retryErrorType(error: unknown): string {
   if (error instanceof InttegroAPIError && error.statusCode) return `http_${error.statusCode}`;
   if (error instanceof SyntaxError) return 'decode_error';
   return 'unknown_error';
-}
-
-function rejectTopLevelIdempotencyKey(body: string): string {
-  let payload: unknown;
-  try {
-    payload = JSON.parse(body) as unknown;
-  } catch {
-    return body;
-  }
-  if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
-    return body;
-  }
-  const record = payload as Record<string, unknown>;
-  if (Object.prototype.hasOwnProperty.call(record, 'idempotency_key')) {
-    throw new TypeError(
-      'Top-level idempotencyKey is not supported; use requestMeta.idempotencyKey or the Idempotency-Key header'
-    );
-  }
-  return body;
 }
 
 function addRequestMetaIdempotencyKey(body: string): string {
