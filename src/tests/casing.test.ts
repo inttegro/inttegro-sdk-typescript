@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { HttpClient } from '../http-client';
 import { InttegroValidationError } from '../errors';
+import type { RequestMeta } from '../types/requests';
 
 describe('TypeScript API casing', () => {
   afterEach(() => {
@@ -33,6 +34,39 @@ describe('TypeScript API casing', () => {
     });
     expect(body.customerData).toBeUndefined();
     expect(body.request_meta.idempotency_key).toBeTypeOf('string');
+  });
+
+  it('serializes typed response projections without changing resource property paths', async () => {
+    const calls: RequestInit[] = [];
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (_url: string, options: RequestInit) => {
+        calls.push(options);
+        return jsonResponse({ order: { id: 'or_123', status: 'draft' } });
+      })
+    );
+
+    const requestMeta: RequestMeta = {
+      response: {
+        projection: {
+          order: { pick: ['id', 'status', 'customer.name'] },
+          payment: { omit: ['latest_error'] },
+        },
+      },
+    };
+    const client = new HttpClient({ apiKey: 'sk_test' });
+    await client.post('/orders/create', { requestMeta });
+
+    expect(JSON.parse(calls[0].body as string)).toMatchObject({
+      request_meta: {
+        response: {
+          projection: {
+            order: { pick: ['id', 'status', 'customer.name'] },
+            payment: { omit: ['latest_error'] },
+          },
+        },
+      },
+    });
   });
 
   it('deserializes snake_case response fields to camelCase without changing custom data keys', async () => {
