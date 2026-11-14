@@ -81,7 +81,64 @@ describe('PurchaseIntents', () => {
     await expect(
       purchaseIntents.create({
         quantity: { min: 1, max: 5 },
-      } as any)
+      } as never)
     ).rejects.toThrow('Validation failed');
+
+    const ambiguousRequest = {
+      productId: 'prod_123',
+      bundleId: 'pbd_123',
+      priceId: 'pr_123',
+      quantity: { min: 1 },
+    } as never;
+    await expect(purchaseIntents.create(ambiguousRequest)).rejects.toThrow(
+      'Exactly one product or bundle selector must be provided'
+    );
+  });
+
+  it('creates bundle purchase intents with a catalog default or offer override', async () => {
+    const bundlePrice = {
+      active: true,
+      nominal: { currency: 'ghs', value: 3200 },
+    } satisfies NonNullable<PurchaseIntent['bundle']>['price'];
+    const bundle = {
+      components: [{ name: 'Tea guide', quantity: 1 }],
+      id: 'pbd_123',
+      name: 'Tea collection',
+      price: bundlePrice,
+    } satisfies NonNullable<PurchaseIntent['bundle']>;
+    const intent = {
+      allowVariants: false,
+      bundle,
+      createdAt: '2026-11-14T00:00:00Z',
+      id: 'sale_bundle',
+      quantity: { min: 1 },
+      status: 'active',
+      usage: { multiUse: true },
+    } satisfies PurchaseIntent;
+    const postSpy = vi.spyOn(httpClient, 'post').mockResolvedValue({ purchaseIntent: intent });
+    const request = {
+      bundle: { id: 'pbd_123' },
+      quantity: { min: 1 },
+    };
+
+    await expect(purchaseIntents.create(request)).resolves.toEqual(intent);
+    expect(postSpy).toHaveBeenCalledWith('/purchase_intents/create', request);
+
+    const offerRequest = {
+      bundleId: 'pbd_123',
+      price: { nominal: { currency: 'ghs', value: 2400 } },
+      quantity: { min: 1 },
+    } as const;
+    await expect(purchaseIntents.create(offerRequest)).resolves.toEqual(intent);
+    expect(postSpy).toHaveBeenCalledWith('/purchase_intents/create', offerRequest);
+
+    await expect(
+      purchaseIntents.create({
+        bundleId: 'pbd_123',
+        priceId: 'pr_offer',
+        price: { nominal: { currency: 'ghs', value: 2400 } },
+        quantity: { min: 1 },
+      } as never)
+    ).rejects.toThrow('Provide at most one price or priceId for a bundle');
   });
 });
