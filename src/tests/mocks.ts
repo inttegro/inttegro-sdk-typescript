@@ -92,6 +92,9 @@ export const mockChimeResponse = {
     fullMessage: 'hello there',
     senderId: 'YourBrand',
     transmission: {
+      address: '+233244123456',
+      initializedAt: new Date('2025-12-10T10:29:59Z'),
+      mechanism: 'sms',
       sentVia: 'sms',
       status: 'sent',
       createdAt: new Date('2025-12-10T10:30:00Z'),

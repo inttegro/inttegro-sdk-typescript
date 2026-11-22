@@ -52,7 +52,6 @@ export interface InitiateOtpRequest {
   serviceName: string;
   requestMeta?: RequestMeta;
   messageTemplate?: string;
-  preferredGateway?: 'twilio' | 'vonage' | 'africas-talking' | 'termii' | string;
   purpose: OTPPurpose;
   tokenAlphabet?: string;
   tokenAlphabetType?: OTPAlphabetType;
@@ -96,8 +95,6 @@ export interface OtpTransaction {
   recipient?: string;
   sender?: string;
   mechanism?: string;
-  gateway?: string;
-  preferredGateway?: string;
   createdAt?: Date;
   deliveredAt?: Date;
   verifiableUntil?: string;

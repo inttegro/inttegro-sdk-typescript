@@ -143,7 +143,21 @@ export interface PaymentReceipt {
     web: { url: string };
     pdf: { url: string };
   };
-  deliverySummary?: Record<string, unknown>;
+  deliverySummary?: OrderDocumentDeliverySummary;
+}
+
+export interface OrderDocumentDeliveryChannelSummary {
+  count: number;
+  latestSentAt: Date;
+}
+
+export interface OrderDocumentDeliverySummary {
+  channels: {
+    email?: OrderDocumentDeliveryChannelSummary;
+    sms?: OrderDocumentDeliveryChannelSummary;
+  };
+  latestSentAt: Date;
+  totalCount: number;
 }
 
 /** A payment collected for an order. */

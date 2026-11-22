@@ -632,7 +632,6 @@ export interface OrderDocumentDeliveryRequest {
 export interface OrderDocumentDeliveryAttempt {
   channel: string;
   chimeId?: string;
-  error?: string;
 }
 
 /** Order document delivery details */

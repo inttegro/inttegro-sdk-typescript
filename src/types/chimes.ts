@@ -136,12 +136,16 @@ export interface LookupChimeRequest {
 }
 
 export interface ChimeTransmission {
-  createdAt?: Date;
+  address: string;
+  createdAt: Date;
   deliveredAt?: Date | null;
   failedAt?: Date | null;
+  initializedAt: Date;
+  mechanism: ChimeTransport;
   sentAt?: Date | null;
   sentVia?: ChimeTransport | null;
-  status?: string;
+  status: string;
+  suppressedAt?: Date | null;
 }
 
 export interface Chime {
