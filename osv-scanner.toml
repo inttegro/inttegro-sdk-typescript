@@ -1,0 +1,4 @@
+[[IgnoredVulns]]
+id = "GHSA-g3hv-75wg-m249"
+effectiveUntil = 2027-02-28
+reason = "minimatch is used only by TypeDoc while generating documentation from trusted repository paths. TypeDoc 0.28.20 is incompatible with minimatch 11; remove this exception when TypeDoc supports the fixed major version."
