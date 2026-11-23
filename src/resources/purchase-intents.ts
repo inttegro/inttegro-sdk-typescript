@@ -16,7 +16,7 @@ export class PurchaseIntents {
 
   async create(request: CreatePurchaseIntentRequest): Promise<PurchaseIntent> {
     const errors = validateRequired(request as unknown as Record<string, unknown>, ['quantity']);
-    errors.push(...validatePurchaseIntentProductSelection(request));
+    errors.push(...validatePurchaseIntentResourceSelection(request));
     errors.push(...validatePurchaseIntentPriceSelection(request));
     throwIfValidationErrors(errors);
 
@@ -75,16 +75,18 @@ export class PurchaseIntents {
   }
 }
 
-function validatePurchaseIntentProductSelection(
+function validatePurchaseIntentResourceSelection(
   request: CreatePurchaseIntentRequest
 ): ValidationError[] {
-  if ('product' in request && request.product) return [];
-  if ('productId' in request && request.productId) return [];
+  const values = [request.product, request.productId, request.bundle, request.bundleId].filter(
+    Boolean
+  );
+  if (values.length === 1) return [];
 
   return [
     {
-      field: 'product/productId',
-      message: 'Either product or productId must be provided',
+      field: 'product/productId/bundle/bundleId',
+      message: 'Exactly one product or bundle selector must be provided',
     },
   ];
 }
@@ -92,13 +94,19 @@ function validatePurchaseIntentProductSelection(
 function validatePurchaseIntentPriceSelection(
   request: CreatePurchaseIntentRequest
 ): ValidationError[] {
-  if ('price' in request && request.price) return [];
-  if ('priceId' in request && request.priceId) return [];
+  const bundleSelected = Boolean(request.bundle || request.bundleId);
+  const priceCount = [request.price, request.priceId].filter(Boolean).length;
+  if (bundleSelected && priceCount <= 1) return [];
+  if (!bundleSelected && priceCount === 1) return [];
+
+  const message = bundleSelected
+    ? 'Provide at most one price or priceId for a bundle'
+    : 'Exactly one price or priceId must be provided for a product';
 
   return [
     {
       field: 'price/priceId',
-      message: 'Either price or priceId must be provided',
+      message,
     },
   ];
 }

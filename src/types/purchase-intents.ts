@@ -24,6 +24,10 @@ export interface PurchaseIntentProductSelector {
   variantSetId?: string;
 }
 
+export interface PurchaseIntentBundleSelector {
+  id: string;
+}
+
 export interface PurchaseIntentPriceSelector {
   id?: string;
   nominal?: PriceParams;
@@ -47,6 +51,29 @@ export interface PurchaseIntentPrice {
   label?: string;
   nominal: Amount;
   original?: PurchaseIntentOriginalPrice;
+}
+
+export interface PurchaseIntentBundleComponent {
+  about?: string;
+  category?: string;
+  imageUrl?: string;
+  name: string;
+  priceId?: string;
+  productId?: string;
+  quantity: number;
+  reference?: string;
+  type?: string;
+}
+
+export interface PurchaseIntentBundle {
+  about?: string;
+  components?: PurchaseIntentBundleComponent[];
+  id: string;
+  media?: ProductMedia | null;
+  name?: string;
+  /** Current catalog price reference; the intent's top-level price is the offer. */
+  price?: PurchaseIntentPrice;
+  reference?: string;
 }
 
 export interface PurchaseIntentQuantity {
@@ -95,28 +122,32 @@ interface CreatePurchaseIntentBase {
 }
 
 type PurchaseIntentProductSelection =
-  | {
-      product: PurchaseIntentProductSelector;
-      productId?: never;
-    }
-  | {
-      productId: string;
-      product?: never;
-    };
+  | { product: PurchaseIntentProductSelector; productId?: never }
+  | { productId: string; product?: never };
+
+type PurchaseIntentBundleSelection =
+  { bundle: PurchaseIntentBundleSelector; bundleId?: never } | { bundleId: string; bundle?: never };
 
 type PurchaseIntentPriceSelection =
-  | {
-      price: PurchaseIntentPriceSelector;
-      priceId?: never;
-    }
-  | {
-      priceId: string;
-      price?: never;
-    };
+  { price: PurchaseIntentPriceSelector; priceId?: never } | { priceId: string; price?: never };
+
+type OptionalPurchaseIntentPriceSelection =
+  PurchaseIntentPriceSelection | { price?: never; priceId?: never };
+
+type CreateProductPurchaseIntentRequest = PurchaseIntentProductSelection &
+  PurchaseIntentPriceSelection & {
+    bundle?: never;
+    bundleId?: never;
+  };
+
+type CreateBundlePurchaseIntentRequest = PurchaseIntentBundleSelection &
+  OptionalPurchaseIntentPriceSelection & {
+    product?: never;
+    productId?: never;
+  };
 
 export type CreatePurchaseIntentRequest = CreatePurchaseIntentBase &
-  PurchaseIntentProductSelection &
-  PurchaseIntentPriceSelection;
+  (CreateProductPurchaseIntentRequest | CreateBundlePurchaseIntentRequest);
 
 export interface UpdatePurchaseIntentRequest {
   id: string;
@@ -197,11 +228,13 @@ export interface PurchaseIntentVariantSet {
 
 export interface PurchaseIntent {
   allowVariants: boolean;
+  bundle?: PurchaseIntentBundle;
   createdAt: Date;
   expiresAt?: Date;
   id: string;
   inactiveAt?: Date;
   merchant?: PurchaseIntentMerchant;
+  /** Effective Buy-link offer price, including a bundle's catalog default. */
   price?: PurchaseIntentPrice;
   presentation?: PurchaseIntentPresentation;
   product?: PurchaseIntentProduct;

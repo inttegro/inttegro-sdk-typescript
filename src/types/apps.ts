@@ -57,7 +57,7 @@ export interface App {
   createdAt: Date;
   updatedAt?: Date;
   archivedAt?: Date;
-  capabilities: Record<string, unknown>;
+  capabilities: AppCapabilityProjection;
   childrenPolicy?: ChildrenPolicy;
   operatingPolicy?: ApplicationOperatingPolicy;
   secretKey?: {
@@ -106,6 +106,11 @@ export interface AppCapability {
 export interface AppCapabilities {
   payments: AppCapability;
   payouts: AppCapability;
+}
+
+export interface AppCapabilityProjection {
+  payments?: AppCapability;
+  payouts?: AppCapability;
 }
 
 export interface UpdateAppRequest {

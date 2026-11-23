@@ -51,7 +51,6 @@ const TEMPORAL_FIELDS = new Set([
   'issuedAt',
   'lastAccessedAt',
   'lastAttemptedAt',
-  'lastEmailEventAt',
   'lastIndexedAt',
   'lastUsedAt',
   'occurredAt',

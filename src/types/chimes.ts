@@ -136,12 +136,16 @@ export interface LookupChimeRequest {
 }
 
 export interface ChimeTransmission {
-  createdAt?: Date;
+  address: string;
+  createdAt: Date;
   deliveredAt?: Date | null;
   failedAt?: Date | null;
+  initializedAt: Date;
+  mechanism: ChimeTransport;
   sentAt?: Date | null;
   sentVia?: ChimeTransport | null;
-  status?: string;
+  status: string;
+  suppressedAt?: Date | null;
 }
 
 export interface Chime {
@@ -178,6 +182,22 @@ export interface ChimePage {
   number?: number;
   size?: number;
   chimes?: Chime[];
+}
+
+export interface ChimeSmsSettings {
+  defaultSender: string;
+  minSenderCharLen: number;
+  maxSenderCharLen: number;
+}
+
+export interface ChimeEmailSettings {
+  defaultFrom: string;
+  allowedFrom: string[];
+}
+
+export interface ChimeSettings {
+  sms: ChimeSmsSettings;
+  email: ChimeEmailSettings;
 }
 
 export interface LookupBroadcastRequest {
