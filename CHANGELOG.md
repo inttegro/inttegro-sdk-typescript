@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [15.0.0] - 2026-11-23
+
+- **Breaking:** removed provider-specific Chime delivery-event fields and the
+  internal email-event ingestion model from the public SDK.
+- **Breaking:** removed legacy OTP gateway selection and private
+  document-delivery failure details.
+- Replaced known map-shaped response data with typed application capability and
+  payment receipt models.
+- Added typed priced-bundle Buy-link inputs.
+- Added typed lookup of effective, non-secret Chime delivery settings.
+
 ## [14.1.0] - 2026-11-07
 
 - Added typed response-projection metadata with resource-level `pick` and

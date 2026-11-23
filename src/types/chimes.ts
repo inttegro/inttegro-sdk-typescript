@@ -184,6 +184,22 @@ export interface ChimePage {
   chimes?: Chime[];
 }
 
+export interface ChimeSmsSettings {
+  defaultSender: string;
+  minSenderCharLen: number;
+  maxSenderCharLen: number;
+}
+
+export interface ChimeEmailSettings {
+  defaultFrom: string;
+  allowedFrom: string[];
+}
+
+export interface ChimeSettings {
+  sms: ChimeSmsSettings;
+  email: ChimeEmailSettings;
+}
+
 export interface LookupBroadcastRequest {
   broadcastId: string;
 }

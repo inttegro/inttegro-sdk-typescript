@@ -4,6 +4,7 @@ import {
   BroadcastChimeRequest,
   Chime,
   ChimePage,
+  ChimeSettings,
   LookupChimeRequest,
   PageChimesRequest,
   SendChimeRequest,
@@ -36,6 +37,10 @@ export class Chimes {
 
   async page(request: PageChimesRequest = {}): Promise<ChimePage> {
     return this.httpClient.postResource<ChimePage>('/chimes/page', 'page', request);
+  }
+
+  async settings(): Promise<ChimeSettings> {
+    return this.httpClient.postResource<ChimeSettings>('/chimes/settings', 'settings', {});
   }
 
   async broadcast(request: BroadcastChimeRequest): Promise<Broadcast> {
